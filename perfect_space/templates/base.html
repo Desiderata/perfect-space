@@ -1,0 +1,128 @@
+{% load staticfiles %}
+<html lang="{{ request.LANGUAGE_CODE }}">
+<head data-page="head">
+    <meta charset="UTF-8">
+    <title>PERFECT SPACE</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+{#    <link rel="icon" type="image/ico" href="favicon.ico">#}
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+</head>
+<body>
+<div class="container-fluid general">
+    <div class="content center-block">
+        <div class="row" data-page="logo">
+            <div class="col-md-12">
+                <img src="{% static 'img/logo.png' %}" class="center-block img-responsive" alt="">
+            </div>
+        </div>
+
+        <div class="margin-top"></div>
+
+        <!-- Начало Меню -->
+        <div class="row" data-page="menu">
+            <div class="col-md-12">
+                <ul class="nav nav-justified">
+                    <li class="first"><a href="#">Архитектура</a></li>
+                    <li><a href="#">Интерьер</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li class="last">
+                        <form action="" method="get" role="form">
+                            <div class="input-group search">
+                                <input type="text" class="form-control searchinput" placeholder="Поиск...">
+					<span class="input-group-btn">
+						<button class="btn btn-default searchbutton" type="button"><img src="{% static 'icons/search-icon.png' %}" class="" alt=""></button>
+					</span>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Конец Меню -->
+    </div>
+    <div class="jumbotron vertical-center" style=" /* display: block; */ ">
+        <div class="text-center">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="4" class=""></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="{% static 'img/mainpage/slide1.png' %}" class="img-slide" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'img/mainpage/slide2.png' %}" class="img-slide" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'img/mainpage/slide3.png' %}" class="img-slide" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'img/mainpage/slide4.png' %}" class="img-slide" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'img/mainpage/slide5.png' %}" class="img-slide" alt="">
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="margin-top"></div>
+    <div class="content center-block">
+        <!-- Начало Подвала -->
+        <div data-page="footer">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 margin-bottom-20">
+                    <img src="{% static 'icons/round-icon.png' %}" class="center-block" alt="">
+                </div>
+            </div>
+            <div class="row footer">
+                <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4 text-center">
+                    <p>© Perfect Space 2015-2016, все права защищены</p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4 text-center">
+                    <p>+7 (916) 936 06 13
+                        <br>info@perfect-space.ru</p>
+                    <br><br>
+                    <p><b>RUS</b> / Eng</p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4 text-right">
+                    <ul class="list-inline social">
+                        <li><img src="{% static 'icons/facebook-icon.png' %}" alt=""></li>
+                        <li><img src="{% static 'icons/instagram-icon.png' %}" alt=""></li>
+                        <li><img src="{% static 'icons/p-icon.png' %}" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Конец Подвала -->
+    </div>
+</div>
+<!-- Скрипты -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/include.js' %}"></script>
+</body>
+</html>
