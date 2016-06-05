@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$('*').each(function (i, elem) {	
+	$('*').each(function (i, elem) {
 		if ($(elem).attr('data-page')) {
 			$.get("templates/"+ $(elem).attr('data-page') +".html", function (data) {
 				$(elem).append(data);

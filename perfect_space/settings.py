@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'ckeditor',
     'easy_thumbnails',
     'debug_toolbar',
 
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -179,7 +181,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'logs/site.log',
+            'filename': os.path.join(BASE_DIR, 'logs/site.log'),
             'formatter': 'verbose'
         },
     },
@@ -211,6 +213,13 @@ LOGGING = {
 # EMAIL_HOST_PASSWORD = '262c13e07ec5b390b97bbbdd38c637d0e02210c6'
 # DEFAULT_FROM_EMAIL = 'support@hotzip.ru'
 # EMAIL_USE_TLS = True
+
+
+# CKEDITOR
+
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_UPLOAD_PATH = 'upload/'
+CKEDITOR_BROWSE_SHOW_DIRS = True
 
 
 # Thumbnails

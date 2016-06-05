@@ -1,5 +1,8 @@
 # coding=utf-8
 from ckeditor.widgets import CKEditorWidget
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
+from django import forms
+
 from perfect_space.apps.pages.models import Page
 from django.contrib import admin
 from django.forms import ModelForm
@@ -8,14 +11,23 @@ from django.forms import ModelForm
 class PageAdminForm(ModelForm):
     class Meta:
         widgets = {
-            'content_ru': CKEditorWidget(),
-            'content_en': CKEditorWidget(),
+            'title_ru': forms.TextInput(attrs={'style': 'width: 500px'}),
+            'keywords_ru': forms.TextInput(attrs={'style': 'width: 500px'}),
+            'description_ru': forms.TextInput(attrs={'style': 'width: 500px'}),
+            'caption_ru': forms.TextInput(attrs={'style': 'width: 500px'}),
+            'content_ru': CKEditorUploadingWidget(),
+
+            'title_en': forms.TextInput(attrs={'style': 'width: 500px'}),
+            'keywords_en': forms.TextInput(attrs={'style': 'width: 500px'}),
+            'description_en': forms.TextInput(attrs={'style': 'width: 500px'}),
+            'caption_en': forms.TextInput(attrs={'style': 'width: 500px'}),
+            'content_en': CKEditorUploadingWidget(),
         }
 
 
 class PageAdmin(admin.ModelAdmin):
     form = PageAdminForm
-    list_display = ('caption_ru', 'title_ru', 'description_ru', 'slug')
+    list_display = ('slug', 'caption_ru', 'title_ru', 'description_ru',)
     list_select_related = True
     prepopulated_fields = {'slug': ('title_ru',)}
 

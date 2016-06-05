@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 
 from perfect_space.apps.pages.views import PageView
@@ -22,6 +23,11 @@ from perfect_space.apps.pages.views import PageView
 urlpatterns = [
     url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
     url(r'^admin/', admin.site.urls),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
-    url(r'^(?P<slug>[a-z\-0-9]+$)$', PageView.as_view(), name='page'),
 ]
+
+urlpatterns += i18n_patterns(
+    url(r'^(?P<slug>[a-z\-0-9]+$)$', PageView.as_view(), name='page'),
+    url(r'^$', PageView.as_view(), kwargs={'slug': 'main'}, name='page_main'),
+)
