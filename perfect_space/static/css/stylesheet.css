@@ -253,31 +253,6 @@ body {
     display: block;
     background-color: transparent;
     color: #010101;
-    font-family: GillSans-SemiBold, sans-serif;
-    text-transform: uppercase;
-    white-space: nowrap;
-    padding: 0 10px;
-}
-.nav > li > a:hover:before,
-.nav > li > a.active:before,
-.nav > li > a:focus:before {
-    content: '•';
-    color: #010101;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.nav > li > a:hover:after,
-.nav > li > a.active:after,
-.nav > li > a:focus:after {
-    content: '•';
-    color: #010101;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
 }
 
 .form-control {
@@ -689,7 +664,6 @@ ul.unstyled li a {
     filter: none;
 }
 
-/* ????? */
 .col-inline-4.first {
     margin-left: 0;
 }

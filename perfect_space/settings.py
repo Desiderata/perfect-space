@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
 
     'perfect_space.apps.pages',
+    'perfect_space.apps.publications',
 ]
 
 MIDDLEWARE_CLASSES = [

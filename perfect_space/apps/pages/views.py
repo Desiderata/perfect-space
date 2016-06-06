@@ -1,6 +1,7 @@
 # coding=utf-8
 from django.views.generic import DetailView
 from perfect_space.apps.pages.models import Page
+from perfect_space.apps.publications.models import Publication
 
 
 class TemplateMixin:
@@ -17,3 +18,21 @@ class PageView(TemplateMixin, DetailView):
 
     def get_object(self, queryset=None):
         return super().get_object(queryset)
+
+    def get_context_data(self, **kwargs):
+        slug = self.kwargs.get('slug')
+        context = super().get_context_data(**kwargs)
+
+        context_method = 'context_' + slug
+        if hasattr(self, context_method):
+            method = getattr(self, context_method)
+            context_addition = method()
+            context = dict(context, **context_addition)
+
+        return context
+
+    def context_about(self):
+        context = {
+            'publications': Publication.objects.all()
+        }
+        return context

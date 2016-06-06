@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load getattr %}
+
+{% block content %}
+    <div class="content center-block">
+        <div class="margin-top"></div>
+        <div class="about clearfix">
+            <div class=" col-xs-6">
+                <img src="/static/img/about/lady.jpg" class="img-responsive" alt="">
+            </div>
+            <div class=" col-xs-6">
+                <h1 class="title">PERFECT SPACE</h1>
+                <p>На сегодняшней день мной спроектировано и реализовано уже более 25 жилых и общественных объектов,
+                    около 20 интерьеров квартир и жилых домов. И продолжение профессионального пути я вижу в
+                    создании команды единомышленников. К своей цели (созданию компании) я шла долго, но уверенно. И
+                    сейчас рада представить PERFECT SPACE—отрытую для нового опыта и знакомств архитектурную
+                    мастерскую, которая не боится сложностей и уверенно развивается во многих направлениях. Помимо
+                    проектирования в ближайшее время мы планируем запустить собственную линию текстиля и аксессуаров
+                    для дома. И это только начало нашего творческого пути.</p>
+                <p>Наталья Самойлова—основатель и идейный вдохновитель архитектурной мастерской PERFECT SPACE;
+                    старший преподаватель Московского Архитектурного Института (кафедра «Архитектуры промышленных
+                    зданий и сооружений»); член Союза Московских Архитекторов; член жюри архитектурного конкурса
+                    Brick in the light.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="margin-top-120"></div>
+    <div class="about clearfix">
+        <ul class="nav nav-tabs text-center">
+            <li class="first active"><a href="#exp" data-toggle="tab">Опыт работы</a></li>
+            <li class=""><a href="#bib" data-toggle="tab">Библиография</a></li>
+            <li class="last"><a href="#pub" data-toggle="tab">Публикации</a></li>
+        </ul>
+
+        <div class="tab-content content center-block">
+            <div class="margin-top-40"></div>
+            {% getattribute page 'content' %}
+            <div class="tab-pane" id="pub" data-about-page="pub">
+                {% for publication in publications %}
+                <div class=" col-inline-4">
+                    <img src="{{ publication.cover.url }}" class="img-responsive" alt="">
+                    <div class="clearfix"></div>
+                    <h4 class="pubupper pubtitle bold">{% getattribute publication 'title' %}</h4>
+                    <p class="pubtext">{% getattribute publication 'description' %}</p>
+                </div>
+                {% endfor %}
+                <div class="col-inline-4 soon">
+                    <img src="{% static 'img/about/soon.png' %}" class="img-responsive" alt="">
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

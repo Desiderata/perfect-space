@@ -1,0 +1,36 @@
+.menu.nav > li > a:hover,
+.menu.nav > li > a.active,
+.menu.nav > li > a:focus {
+    display: block;
+    background-color: transparent;
+    color: #010101;
+    font-family: GillSans-SemiBold, sans-serif;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0 10px;
+}
+.menu.nav > li > a:hover:before,
+.menu.nav > li > a.active:before,
+.menu.nav > li > a:focus:before {
+    content: '•';
+    color: #010101;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.menu.nav > li > a:hover:after,
+.menu.nav > li > a.active:after,
+.menu.nav > li > a:focus:after {
+    content: '•';
+    color: #010101;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.col-inline-4:nth-child(3n+1) {
+    margin-left: 0;
+}

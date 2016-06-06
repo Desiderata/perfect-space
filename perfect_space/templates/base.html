@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
     <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 </head>
 <body>
 <div class="container-fluid general">
@@ -30,12 +31,12 @@
         <!-- Начало Меню -->
         <div class="row" data-page="menu">
             <div class="col-md-12">
-                <ul id="menu" class="nav nav-justified">
+                <ul id="menu" class="menu nav nav-justified">
                     <li class="first"><a href="#">{% trans 'menu_architecture' %}</a></li>
-                    <li><a href="#">{% trans 'menu_interior' %}</a></li>
-                    <li><a href="#">{% trans 'menu_blog' %}</a></li>
-                    <li><a href="#">{% trans 'menu_about' %}</a></li>
-                    <li><a href="#">{% trans 'menu_contacts' %}</a></li>
+                    <li><a href="{% url 'page' slug='interior' %}">{% trans 'menu_interior' %}</a></li>
+                    <li><a href="{% url 'page' slug='blog' %}">{% trans 'menu_blog' %}</a></li>
+                    <li><a href="{% url 'page' slug='about' %}">{% trans 'menu_about' %}</a></li>
+                    <li><a href="{% url 'page' slug='contacts' %}">{% trans 'menu_contacts' %}</a></li>
                     <li class="last">
                         <form action="" method="get" role="form">
                             <div class="input-group search">
