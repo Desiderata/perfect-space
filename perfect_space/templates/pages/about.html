@@ -39,8 +39,8 @@
             {% getattribute page 'content' %}
             <div class="tab-pane" id="pub" data-about-page="pub">
                 {% for publication in publications %}
-                <div class=" col-inline-4">
-                    <img src="{{ publication.cover.url }}" class="img-responsive" alt="">
+                <div class="col-inline-4">
+                    <a href="{{ publication.file.url }}"><img src="{{ publication.cover.url }}" class="img-responsive" alt=""></a>
                     <div class="clearfix"></div>
                     <h4 class="pubupper pubtitle bold">{% getattribute publication 'title' %}</h4>
                     <p class="pubtext">{% getattribute publication 'description' %}</p>
