@@ -23,6 +23,7 @@ class Page(SEO):
     TEMPLATES = (
         ('index', 'Главная'),
         ('about', 'О Нас'),
+        ('projects', 'Проекты'),
     )
 
     content_ru = models.TextField(blank=True, verbose_name='Текст')

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load getattr %}
+
+{% block content %}
+    <div class="content center-block">
+        <div class="margin-top"></div>
+        <div class="center-block">
+            {% for project in projects %}
+            <div class="col-xs-4 photo-item">
+                <a href="{% url 'project_detail' slug=project.slug %}">
+                    <img src="{{ project.thumb.url }}" class="img-responsive" alt="">
+                    <div class="decr vertical-center-g">
+                        <h3 class="photo-item-title">{% getattribute project 'caption' %}</h3>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

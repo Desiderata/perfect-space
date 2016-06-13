@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
     'perfect_space.apps.pages',
     'perfect_space.apps.publications',
+    'perfect_space.apps.projects',
 ]
 
 MIDDLEWARE_CLASSES = [

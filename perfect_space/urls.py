@@ -17,8 +17,8 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
-
 from perfect_space.apps.pages.views import PageView
+from perfect_space.apps.projects.views import ProjectDetail, ProjectList
 
 urlpatterns = [
     url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
@@ -28,6 +28,8 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    url(r'^(?P<slug>[a-z\-0-9]+$)$', PageView.as_view(), name='page'),
+    url(r'^project/(?P<slug>[a-z\-0-9]+$)$', ProjectDetail.as_view(), name='project_detail'),
+    url(r'^projects$', ProjectList.as_view(), name='project_list'),
     url(r'^$', PageView.as_view(), kwargs={'slug': 'main'}, name='page_main'),
+    url(r'^(?P<slug>[a-z\-0-9]+$)$', PageView.as_view(), name='page'),
 )

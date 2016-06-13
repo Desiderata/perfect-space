@@ -15,10 +15,10 @@ class Publication(models.Model):
     def __str__(self):
         return self.title_ru
 
-    def preview_cover(self):
+    def cover_preview(self):
         cover_url = self.cover.url if self.cover else ''
         return format_html('<img src="{0}" alt="" />', cover_url)
-    preview_cover.short_description = 'Превью'
+    cover_preview.short_description = 'Превью'
 
     class Meta:
         verbose_name = 'Публикация'
