@@ -222,6 +222,20 @@ LOGGING = {
 CKEDITOR_IMAGE_BACKEND = "pillow"
 CKEDITOR_UPLOAD_PATH = 'upload/'
 CKEDITOR_BROWSE_SHOW_DIRS = True
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar_perfect_space': [
+            ['Source'], ['Styles', 'Format', 'Bold', 'Italic', 'Underline', 'Strike', 'SpellChecker', 'Undo', 'Redo'],
+            ['Link', 'Unlink', 'Anchor', 'NumberedList', 'BulletedList'],
+            ['Image', 'Flash', 'Table', 'HorizontalRule'],
+            ['TextColor', 'BGColor'],
+            ['Smiley', 'SpecialChar'], ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+        ],
+        'removePlugins': 'stylesheetparser',
+        'allowedContent': True,
+        'toolbar': 'perfect_space',
+    }
+}
 
 
 # Thumbnails

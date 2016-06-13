@@ -23,6 +23,7 @@ class Page(SEO):
     TEMPLATES = (
         ('index', 'Главная'),
         ('about', 'О Нас'),
+        ('contacts', 'Контакты'),
         ('projects', 'Проекты'),
     )
 
