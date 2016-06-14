@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load getattr %}
+
+{% block content %}
+    <div class="margin-top"></div>
+    <div class="text-center clearfix">
+        <div class="col-xs-12">
+            <img src="{{ page.cover.url }}" class="center-block" width="1320" alt="">
+            <div class="clearfix"></div>
+            <small class="gray squote">{% getattribute page 'annotation' %}</small>
+        </div>
+    </div>
+
+    <div class="text-center blog-in">
+        <div class="col-xs-2 text-left">
+            <p class="gray top-18">{{ page.date | date:'d.m.Y' }}</p>
+        </div>
+        <div class="col-xs-8">
+            <h2 class="blog-in-title">{% getattribute page 'caption' %}</h2>
+        </div>
+        <div class="col-xs-2 text-right">
+            <div class="top-18">
+                {% for tag in page.tags.all %}
+                    <a href="{% url 'blog_list' %}?tag={{ tag.id }}">{% getattribute tag 'name' %}</a>{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+{#                <br><i><a href="" class="gray">посмотреть все теги</a></i>#}
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div style="margin-top: 45px;">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3">
+                {% getattribute page 'content' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
