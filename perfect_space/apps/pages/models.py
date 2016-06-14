@@ -25,6 +25,7 @@ class Page(SEO):
         ('about', 'О Нас'),
         ('contacts', 'Контакты'),
         ('projects', 'Проекты'),
+        ('blog', 'Блог'),
     )
 
     content_ru = models.TextField(blank=True, verbose_name='Текст')

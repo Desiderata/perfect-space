@@ -34,3 +34,10 @@
 .col-inline-4:nth-child(3n+1) {
     margin-left: 0;
 }
+
+.tags {
+    text-decoration: none;
+}
+.tags a {
+    text-decoration: underline;
+}

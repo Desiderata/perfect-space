@@ -6,31 +6,35 @@ from easy_thumbnails.files import get_thumbnailer
 from perfect_space.apps.pages.models import SEO
 
 
-class Project(SEO):
+class Tag(models.Model):
+    name_ru = models.CharField(max_length=255, verbose_name='Имя')
+    name_en = models.CharField(max_length=255, verbose_name='Имя')
+
+    def __str__(self):
+        return self.name_ru
+
+    class Meta:
+        verbose_name = 'Тег'
+        verbose_name_plural = 'Теги'
+
+
+class Post(SEO):
     COVER_WIDTH = 1327
     COVER_HEIGHT = 710
-    THUMB_WIDTH = 355
-    THUMB_HEIGHT = 370
+    THUMB_WIDTH = 205
+    THUMB_HEIGHT = 205
 
-    authors_ru = models.CharField(blank=True, max_length=1024, verbose_name='Авторы')
-    address_ru = models.CharField(blank=True, max_length=255, verbose_name='Расположение')
-    date_constructed_ru = models.CharField(blank=True, max_length=255, verbose_name='Дата постройки')
-    date_planning_ru = models.CharField(blank=True, max_length=255, verbose_name='Проектирование')
-    date_realization_ru = models.CharField(blank=True, max_length=255, verbose_name='Реализация')
-    idea_ru = models.TextField(blank=True, verbose_name='Идея')
+    annotation_ru = models.CharField(blank=True, max_length=1024, verbose_name='Аннотация')
     content_ru = models.TextField(blank=True, verbose_name='Текст')
 
-    authors_en = models.CharField(blank=True, max_length=1024, verbose_name='Авторы')
-    address_en = models.CharField(blank=True, max_length=255, verbose_name='Расположение')
-    date_constructed_en = models.CharField(blank=True, max_length=255, verbose_name='Дата постройки')
-    date_planning_en = models.CharField(blank=True, max_length=255, verbose_name='Проектирование')
-    date_realization_en = models.CharField(blank=True, max_length=255, verbose_name='Реализация')
-    idea_en = models.TextField(blank=True, verbose_name='Идея')
+    annotation_en = models.CharField(blank=True, max_length=1024, verbose_name='Аннотация')
     content_en = models.TextField(blank=True, verbose_name='Текст')
 
+    date = models.DateTimeField(verbose_name='Дата')
     slug = models.SlugField(max_length=100, db_index=True, unique=True, verbose_name='Псевдоним')
     cover = models.ImageField(upload_to='projects_cover/%Y/%m/%d/', verbose_name='Обложка')
     thumb = models.ImageField(blank=True, null=True, upload_to='projects_thumb/%Y/%m/%d/', verbose_name='Превью')
+    tags = models.ManyToManyField(Tag, blank=True, related_name='posts')
 
     def __str__(self):
         return self.title_ru
@@ -73,5 +77,5 @@ class Project(SEO):
         super().save(*args, **kwargs)
 
     class Meta:
-        verbose_name = 'Проект'
-        verbose_name_plural = 'Проекты'
+        verbose_name = 'Пост'
+        verbose_name_plural = 'Посты'
