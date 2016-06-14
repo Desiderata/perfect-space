@@ -1,16 +1,21 @@
 # coding=utf-8
 from django import template
-from django.core.urlresolvers import resolve, reverse
 from django.utils import translation
+from django.utils.html import strip_tags
 from django.utils.safestring import mark_safe
 
 register = template.Library()
 
 
 @register.simple_tag(takes_context=True)
-def getattribute(context, obj, attribute):
+def getattribute(context, obj, attribute, length=None):
     lang = translation.get_language()
-    return mark_safe(getattr(obj, '{}_{}'.format(attribute, lang)))
+    content = getattr(obj, '{}_{}'.format(attribute, lang))
+
+    if length:
+        content = strip_tags(content)[:length]
+
+    return mark_safe(content)
 
 
 @register.simple_tag(takes_context=True)

@@ -233,6 +233,7 @@ CKEDITOR_CONFIGS = {
             ['Smiley', 'SpecialChar'], ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
         ],
         'removePlugins': 'stylesheetparser',
+        'contentsCss': '/static/admin/css/chkeditor-gallery.css',
         'allowedContent': True,
         'toolbar': 'perfect_space',
     }

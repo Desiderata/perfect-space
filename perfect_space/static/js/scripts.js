@@ -6,4 +6,9 @@ $(document).ready(function () {
         item.style.width = item.clientWidth + 'px';
         item.style.height = item.clientHeight + 'px';
     }
+
+    lightbox.option({
+        'disableScrolling': true,
+        'fixedNavigation': true
+    });
 });

@@ -1,3 +1,12 @@
+a:hover,
+a:focus,
+a:active {
+    color: #333;
+}
+
+.menu.nav > li {
+    white-space: nowrap;
+}
 .menu.nav > li > a:hover,
 .menu.nav > li > a.active,
 .menu.nav > li > a:focus {
@@ -39,5 +48,30 @@
     text-decoration: none;
 }
 .tags a {
+    color: #808080;
     text-decoration: underline;
+    font-size: 15px;
+}
+
+.media img {
+    margin-right: 12px;
+}
+
+.carousel-inner .item {
+    /*width: 652px;*/
+    text-align: center;
+}
+.carousel-inner .item > a {
+    width: 668px;
+    display: table-cell;
+    height: 440px;
+    vertical-align: middle;
+    text-align: center;
+}
+.carousel-inner .item img {
+    width: 100% !important;
+    height: auto !important;
+}
+.carousel-indicators.small .active {
+    top: 0;
 }
