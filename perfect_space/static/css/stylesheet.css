@@ -351,13 +351,14 @@ ul.unstyled li a {
     margin-right: 4px;
 }
 
-.prev {
-    padding-left: 30px !important;
-}
+/* broken carousel */
+/*.prev {*/
+    /*padding-left: 30px !important;*/
+/*}*/
 
-.nxt {
-    padding-right: 46px !important;
-}
+/*.nxt {*/
+    /*padding-right: 46px !important;*/
+/*}*/
 
 .pager {
     margin-top: 9px;

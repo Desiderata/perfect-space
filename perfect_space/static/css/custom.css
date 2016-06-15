@@ -63,7 +63,6 @@ a:active {
 }
 
 .carousel-inner .item {
-    /*width: 652px;*/
     text-align: center;
 }
 .carousel-inner .item > a {
@@ -80,6 +79,21 @@ a:active {
 .carousel-indicators.small .active {
     top: 0;
 }
+.carousel-indicators .active {
+    background-color: #000;
+    position: relative;
+    top: -1px;
+    width: 7px;
+    height: 7px;
+    margin-left: 11px;
+}
+.carousel-indicators li {
+    border: 0;
+    background-color: #fff;
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+}
 
 
 .col-xs-4.photo-item {
@@ -90,4 +104,15 @@ a:active {
 }
 .photo-item:hover .photo-item-title {
     font-size: 12px;
+}
+
+
+.glyphicon-chevron-left:before {
+    width: 20px;
+    height: 35px;
+}
+
+.glyphicon-chevron-right:before {
+    width: 20px;
+    height: 35px;
 }
