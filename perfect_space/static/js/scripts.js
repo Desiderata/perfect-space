@@ -8,9 +8,9 @@ $(document).ready(function () {
     }
 
     var galleries = document.getElementsByClassName('gallery');
-    for (var j=-1, k=galleries.length; ++j<k;) {
-        var gallery = galleries[j];
-        new Gallery(gallery, j);
+    var j = 0;
+    while (galleries.length > 0) {
+        new Gallery(galleries[0], j++);
     }
 
     lightbox.option({
