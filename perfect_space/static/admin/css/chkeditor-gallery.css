@@ -1,10 +1,7 @@
-.carousel-indicators {
-    list-style: none;
-}
-.carousel-inner .item {
+.gallery li {
     display: inline-block;
 }
-.carousel-inner img {
+.gallery img {
     width: 50px !important;
     height: auto !important;
 }

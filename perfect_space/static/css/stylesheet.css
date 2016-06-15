@@ -565,20 +565,17 @@ ul.unstyled li a {
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
-    filter: url(grayscale.svg); /* Firefox 4+ */
-    filter: gray; /* IE 6-9 */
+    /*filter: url(grayscale.svg); !* Firefox 4+ *!*/
+    /*filter: gray; !* IE 6-9 *!*/
     transition: ease-out .5s;
 }
 
-.photo-item:hover > img {
+.photo-item:hover img {
     -webkit-filter: none;
     -moz-filter: none;
     -ms-filter: none;
     -o-filter: none;
     filter: none;
-    filter: none; /* Firefox 4+ */
-    filter: none; /* IE 6-9 */
-    transition: ease-out .5s;
 }
 
 .photo-item:hover .decr {

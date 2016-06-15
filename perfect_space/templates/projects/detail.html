@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load staticfiles %}
 {% load getattr %}
 
@@ -21,22 +22,22 @@
         <div class="clearfix"></div>
         <div style="margin-top: 40px;">
             <div class="col-xs-3">
-                <h4 class="uppert">Расположение</h4>
+                <h4 class="uppert">{% trans 'address' %}</h4>
                 <br>
                 <p>{% getattribute page 'address' %}</p>
             </div>
             <div class="col-xs-3">
-                <h4 class="uppert">Дата постройки</h4>
+                <h4 class="uppert">{% trans 'date_constructed' %}</h4>
                 <br>
                 <p>{% getattribute page 'date_constructed' %}</p>
             </div>
             <div class="col-xs-3">
-                <h4 class="uppert">Проектирование</h4>
+                <h4 class="uppert">{% trans 'date_planning' %}</h4>
                 <br>
                 <p>{% getattribute page 'date_planning' %}</p>
             </div>
             <div class="col-xs-3">
-                <h4 class="uppert">Реализация</h4>
+                <h4 class="uppert">{% trans 'date_realization' %}</h4>
                 <br>
                 <p>{% getattribute page 'date_realization' %}</p>
             </div>
@@ -48,19 +49,19 @@
     <div style="margin-top: 30px;">
         <div class="row">
             <div class="col-xs-3 text-left">
-                <h4 class="uppert bold">Идея</h4>
-                <p class="gray">Архитектурно-конструктивные<br>решения</p>
+                <h4 class="uppert bold">{% trans 'idea' %}</h4>
+                <p class="gray">{% trans 'architectural_solutions' %}</p>
                 <p>
                 </p></div>
             <div class="col-xs-6">
 
-                <h4 class="uppert bold">Идея</h4>
+                <h4 class="uppert bold">{% trans 'idea' %}</h4>
                 {% getattribute page 'idea' %}
 
-                <h4 class="pubupper bold">Архитектурно-конструктивные решения</h4>
+                <h4 class="pubupper bold">{% trans 'architectural_solutions' %}</h4>
                 {% getattribute page 'content' %}
 
-                <p class="uppert bold smalltitle">Другие проекты</p>
+                <p class="uppert bold smalltitle">{% trans 'projects_similar' %}</p>
                 {% for project_similar in projects_similar %}
                 <div class="col-xs-4 photo-item-small">
                     <a href="{% url 'project_detail' slug=project_similar.slug %}">

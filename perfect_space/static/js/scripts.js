@@ -7,6 +7,12 @@ $(document).ready(function () {
         item.style.height = item.clientHeight + 'px';
     }
 
+    var galleries = document.getElementsByClassName('gallery');
+    for (var j=-1, k=galleries.length; ++j<k;) {
+        var gallery = galleries[j];
+        new Gallery(gallery, j);
+    }
+
     lightbox.option({
         'disableScrolling': true,
         'fixedNavigation': true

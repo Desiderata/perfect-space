@@ -75,3 +75,11 @@ a:active {
 .carousel-indicators.small .active {
     top: 0;
 }
+
+
+.col-xs-4.photo-item {
+    padding-top: 15px;
+}
+.photo-item .decr {
+    top: 150px;
+}
