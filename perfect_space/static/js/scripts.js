@@ -14,7 +14,7 @@ $(document).ready(function () {
     }
 
     lightbox.option({
-        'disableScrolling': true,
-        'fixedNavigation': true
+        disableScrolling: true,
+        fixedNavigation: true
     });
 });

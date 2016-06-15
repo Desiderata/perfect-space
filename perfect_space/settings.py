@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
+    'perfect-space.ru',
     'perfect-space.dev',
     'perfect-space.pavel-titov.com',
 ]

@@ -29,6 +29,7 @@ Gallery.prototype.createContainer = function() {
     container.id = this.getId();
     container.className = 'carousel slide carousel-fit';
     container.setAttribute('data-ride', 'carousel');
+    container.setAttribute('data-interval', 'false');
 
     return container;
 };

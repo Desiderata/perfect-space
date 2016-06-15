@@ -4,6 +4,11 @@ a:active {
     color: #333;
 }
 
+.logo-image {
+    width: 315px;
+    height: 26px;
+}
+
 .menu.nav > li {
     white-space: nowrap;
 }
@@ -82,4 +87,7 @@ a:active {
 }
 .photo-item .decr {
     top: 150px;
+}
+.photo-item:hover .photo-item-title {
+    font-size: 12px;
 }
