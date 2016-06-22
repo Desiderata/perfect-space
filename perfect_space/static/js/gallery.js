@@ -27,7 +27,7 @@ Gallery.prototype.createGallery = function() {
 Gallery.prototype.createContainer = function() {
     var container = document.createElement('div');
     container.id = this.getId();
-    container.className = 'carousel slide carousel-fit';
+    container.className = 'carousel slide carousel-fit carousel-fade';
     container.setAttribute('data-ride', 'carousel');
     container.setAttribute('data-interval', 'false');
 

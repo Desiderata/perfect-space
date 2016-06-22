@@ -19,7 +19,8 @@ a:active {
     display: block;
     background-color: transparent;
     color: #010101;
-    font-family: GillSans-SemiBold, sans-serif;
+    font-family: Lato, sans-serif;
+    font-weight: bold;
     text-transform: uppercase;
     white-space: nowrap;
     padding: 0 10px;
@@ -148,4 +149,34 @@ a:active {
 .glyphicon-chevron-right:before {
     width: 20px;
     height: 35px;
+}
+
+
+.page {
+    font-size: 15px;
+}
+.page p {
+    font-size: inherit;
+}
+.page h4:first-child {
+    margin-top: 0;
+}
+.subtitle {
+    font-family: "Lato Semibold", sans-serif;
+    font-size: 15px;
+}
+.subtitle-text {
+    font-size: 15px;
+}
+
+
+.project-menu-item {
+    color: #808080;
+    font-family: Lato SemiBold, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.project-menu-item.active {
+    color: #010101;
 }
