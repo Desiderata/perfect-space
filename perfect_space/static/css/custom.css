@@ -12,6 +12,7 @@ a:active {
 .menu.nav > li {
     white-space: nowrap;
 }
+
 .menu.nav > li > a:hover,
 .menu.nav > li > a.active,
 .menu.nav > li > a:focus {
@@ -23,6 +24,7 @@ a:active {
     white-space: nowrap;
     padding: 0 10px;
 }
+
 .menu.nav > li > a:hover:before,
 .menu.nav > li > a.active:before,
 .menu.nav > li > a:focus:before {
@@ -52,6 +54,7 @@ a:active {
 .tags {
     text-decoration: none;
 }
+
 .tags a {
     color: #808080;
     text-decoration: underline;
@@ -65,6 +68,7 @@ a:active {
 .carousel-inner .item {
     text-align: center;
 }
+
 .carousel-inner .item > a {
     width: 668px;
     display: table-cell;
@@ -72,13 +76,16 @@ a:active {
     vertical-align: middle;
     text-align: center;
 }
+
 .carousel-inner .item img {
     width: 100% !important;
     height: auto !important;
 }
+
 .carousel-indicators.small .active {
     top: 0;
 }
+
 .carousel-indicators .active {
     background-color: #000;
     position: relative;
@@ -87,6 +94,7 @@ a:active {
     height: 7px;
     margin-left: 11px;
 }
+
 .carousel-indicators li {
     border: 0;
     background-color: #fff;
@@ -96,16 +104,41 @@ a:active {
 }
 
 
+.carousel-fade .carousel-inner .item {
+	transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+	opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+	opacity: 1;
+}
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+	left: 0;
+	transform: translate3d(0, 0, 0);
+}
+
 .col-xs-4.photo-item {
     padding-top: 15px;
 }
+
 .photo-item .decr {
     top: 150px;
 }
+
 .photo-item:hover .photo-item-title {
     font-size: 12px;
 }
-
 
 .glyphicon-chevron-left:before {
     width: 20px;
