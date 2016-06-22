@@ -1,5 +1,5 @@
 * {
-    font-family: Lato, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 a {
@@ -28,7 +28,7 @@ a:hover {
 
 .title {
     margin-top: 0;
-    font-family: Lato SemiBold, sans-serif;
+    font-family: RobotoBold, sans-serif;
 }
 
 .subtitle {
@@ -63,7 +63,7 @@ a:hover {
     margin-top: 35px;
     text-transform: uppercase;
     font-size: 13pt;
-    font-family: Lato SemiBold, sans-serif;
+    font-family: RobotoBold, sans-serif;
 }
 
 .pubupper {
@@ -835,7 +835,7 @@ ul.unstyled li a {
 .blog-in-title {
     font-size: 14pt;
     text-transform: uppercase;
-    font-family: Lato SemiBold, sans-serif;
+    font-family: RobotoBold, sans-serif;
 }
 
 .blog-in {
