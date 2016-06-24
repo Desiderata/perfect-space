@@ -19,7 +19,7 @@ a:active {
     display: block;
     background-color: transparent;
     color: #010101;
-    font-family: Lato, sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
     white-space: nowrap;
@@ -135,10 +135,7 @@ a:active {
 
 .photo-item .decr {
     top: 150px;
-}
-
-.photo-item:hover .photo-item-title {
-    font-size: 12px;
+    padding: 10px;
 }
 
 .glyphicon-chevron-left:before {
@@ -153,30 +150,47 @@ a:active {
 
 
 .page {
-    font-size: 15px;
+    font-size: 14px;
 }
 .page p {
     font-size: inherit;
+    line-height: 1.5;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    text-align: justify;
 }
 .page h4:first-child {
     margin-top: 0;
 }
-.subtitle {
-    font-family: "Lato Semibold", sans-serif;
-    font-size: 15px;
-}
 .subtitle-text {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 
 .project-menu-item {
     color: #808080;
-    font-family: Lato SemiBold, sans-serif;
-    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 8px;
 }
 .project-menu-item.active {
     color: #010101;
+    font-weight: bold;
+}
+.project-menu-item:hover {
+    cursor: pointer;
+    color: #010101;
+    font-weight: bold;
+}
+
+.lang-link:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.blog-description {
+    font-size: 14px;
 }

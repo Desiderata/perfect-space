@@ -37,14 +37,14 @@ class ProjectAdminForm(ModelForm):
 
 class ProjectAdmin(admin.ModelAdmin):
     form = ProjectAdminForm
-    list_display = ('slug', 'caption_ru', 'description_ru',)
+    list_display = ('caption_ru', 'slug', 'date_publication', 'description_ru',)
     list_select_related = True
     readonly_fields = ('cover_preview', 'thumb_preview',)
     prepopulated_fields = {'slug': ('title_ru',)}
 
     fieldsets = [
         (None, {
-            'fields': ['slug', 'cover', 'cover_preview', 'thumb', 'thumb_preview']
+            'fields': ['date_publication', 'slug', 'cover', 'cover_preview', 'thumb', 'thumb_preview']
         }),
         ('Русский', {
             'fields': [

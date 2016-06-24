@@ -11,8 +11,8 @@ a {
 }
 
 p {
-    font-size: 12pt;
-    line-height: 1.2;
+    font-size: 14px;
+    line-height: 1.5;
     overflow-wrap: break-word; /* ?? ???????????? IE, Firefox; ???????? ?????? word-wrap */
     word-wrap: break-word;
     word-break: normal; /* ?? ???????????? Opera12.14, ???????? keep-all ?? ?????????????? IE, Chrome */
@@ -28,15 +28,18 @@ a:hover {
 
 .title {
     margin-top: 0;
-    font-family: RobotoBold, sans-serif;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .subtitle {
     text-transform: uppercase;
-    font-family: serif;
-    font-weight: 700;
-    font-size: 13pt;
+    font-size: 14px;
     letter-spacing: 0.55px;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    margin-bottom: 14px;
 }
 
 .subtitle:first-child {
@@ -44,9 +47,9 @@ a:hover {
 }
 
 .smalltitle {
-    font-size: 8.5pt !important;
+    font-size: 12px !important;
     text-transform: uppercase;
-    font-family: GillSans !important;
+    font-family: Roboto !important;
     letter-spacing: 1px !important;
     background-color: white;
 }
@@ -57,27 +60,30 @@ a:hover {
 
 .pubtext {
     color: #636363;
+    font-size: 13px;
 }
 
 .headertitile {
     margin-top: 35px;
+    margin-bottom: 0;
     text-transform: uppercase;
-    font-size: 13pt;
+    font-size: 17px;
     font-family: RobotoBold, sans-serif;
 }
 
 .pubupper {
-    font-family: MerriWeather, sans-serif;
+    font-family: Roboto, sans-serif;
     text-transform: uppercase;
-    font-size: 12.2pt;
-    letter-spacing: 1.68px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .blogupper {
-    font-family: GaramondPremrPro-Bd;
+    font-family: Roboto, sans-serif;
     text-transform: uppercase;
-    font-size: 11pt;
-    margin-bottom: 2px;
+    font-size: 14px;
+    margin-bottom: 8px;
 }
 
 .pagination-upper {
@@ -170,7 +176,7 @@ body {
 }
 
 .footer p {
-    font-size: 8pt;
+    font-size: 11px;
 }
 
 .footer ul.social {
@@ -222,7 +228,7 @@ body {
 
 .nav > li > a {
     color: #000000;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .nav > li > a:hover,
@@ -275,6 +281,7 @@ body {
 .input-group .form-control.searchinput {
     width: 71px;
     padding: 0;
+    font-size: 15px;
 }
 
 .input-group .searchbutton {
@@ -353,10 +360,9 @@ ul.unstyled li a {
 
 .about .title {
     text-transform: uppercase;
-    font-family: serif;
-    font-weight: 700;
+    font-weight: bold;
     /*line-height: 2;*/
-    font-size: 13pt;
+    font-size: 14px;
 }
 
 #pub img {
@@ -386,7 +392,7 @@ ul.unstyled li a {
 }
 
 .nav-tabs > li.active > a {
-    font-size: 12.5pt;
+    font-size: 13px;
     text-transform: uppercase;
     color: #000;
     font-weight: 700;
@@ -524,11 +530,12 @@ ul.unstyled li a {
 
 .photo-item-title-small {
     margin: 0;
-    font-size: 10pt;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: normal;
 }
 
-.photo-item-title-small:before, .photo-item-title-small:after {
+.photo-item-title-small:hover:before,
+.photo-item-title-small:hover:after {
     background: url("../icons/round-icon.png") no-repeat center;
     background-size: 5px;
     display: inline-block;
@@ -563,13 +570,14 @@ ul.unstyled li a {
 
 .photo-item-title {
     margin: 0;
-    font-size: 12pt;
+    font-size: 15px;
 }
 
 .photo-item:hover .photo-item-title {
     text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: .2px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
 }
 
 .photo-item:hover .photo-item-title:before, .photo-item:hover .photo-item-title:after {
@@ -725,17 +733,13 @@ ul.unstyled li a {
     margin-top: 5px;
 }
 
-.bibarticle2 {
-
-}
-
 .bibarticle:after, .bibarticle2:after {
     content: "";
     clear: both;
 }
 
 .bibarticle p, .bibarticle2 p {
-    line-height: 1.1;
+    line-height: 1.5;
     text-align: justify
 }
 
@@ -812,7 +816,7 @@ ul.unstyled li a {
 }
 
 .datetime {
-    font-size: 11pt;
+    font-size: 12px;
 }
 
 .tags {

@@ -73,13 +73,16 @@
                         <a class="footer-link" href="mailto:info@perfect-space.ru">info@perfect-space.ru</a>
                     </p>
                     <br><br>
-                    {% if request.LANGUAGE_CODE == 'ru' %}
-                        {% language 'en' %}
-                            <p><strong>RUS</strong> / <a href="{% change_lang 'en' %}">Eng</a></p>
-                        {% endlanguage %}
-                    {% else %}
-                        <p><a href="{% change_lang 'ru' %}">Rus</a> / <strong>ENG</strong></p>
-                    {% endif %}
+                    <div class="lang">
+                        {% if request.LANGUAGE_CODE == 'ru' %}
+                            {% language 'en' %}
+                                <p><strong>RUS</strong> / <a class="lang-link" href="{% change_lang 'en' %}">Eng</a></p>
+                            {% endlanguage %}
+                        {% else %}
+                            <p><a class="lang-link" href="{% change_lang 'ru' %}">Rus</a> / <strong>ENG</strong></p>
+                        {% endif %}
+
+                    </div>
                 </div>
                 <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4 text-right">
                     <ul class="list-inline social">
