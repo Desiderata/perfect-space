@@ -18,6 +18,7 @@ from django.conf.urls import url, include
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from perfect_space.apps.blog.views import BlogList, BlogDetail
+from perfect_space.apps.interiors.views import InteriorDetail, InteriorList
 from perfect_space.apps.pages.views import PageView
 from perfect_space.apps.projects.views import ProjectDetail, ProjectList
 
@@ -31,6 +32,8 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     url(r'^project/(?P<slug>[a-z\-0-9]+$)$', ProjectDetail.as_view(), name='project_detail'),
     url(r'^projects$', ProjectList.as_view(), name='project_list'),
+    url(r'^interior/(?P<slug>[a-z\-0-9]+$)$', InteriorDetail.as_view(), name='interior_detail'),
+    url(r'^interiors$', InteriorList.as_view(), name='interior_list'),
     url(r'^blog$', BlogList.as_view(), name='blog_list'),
     url(r'^blog/(?P<slug>[a-z\-0-9]+$)$', BlogDetail.as_view(), name='blog_detail'),
     url(r'^$', PageView.as_view(), kwargs={'slug': 'main'}, name='page_main'),

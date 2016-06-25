@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load getattr %}
+
+{% block content %}
+    <div class="margin-top"></div>
+    <div class="text-center clearfix">
+        <div class="col-xs-12">
+            <img src="{{ page.cover.url }}" class="center-block" width="1320" alt="">
+        </div>
+    </div>
+
+    <div class="text-center">
+        <div class="col-xs-8 col-xs-offset-2">
+            <h1 class="headertitile">{% getattribute page 'caption' %}</h1>
+            <br>
+            <p>
+                {% getattribute page 'authors' %}
+            </p>
+        </div>
+        <div class="clearfix"></div>
+        <div style="margin-top: 40px;">
+            <div class="col-xs-3">
+                <h4 class="subtitle">{% trans 'address' %}</h4>
+                <p class="subtitle-text">{% getattribute page 'address' %}</p>
+            </div>
+            <div class="col-xs-3">
+                <h4 class="subtitle">{% trans 'date_constructed' %}</h4>
+                <p class="subtitle-text">{% getattribute page 'date_constructed' %}</p>
+            </div>
+            <div class="col-xs-3">
+                <h4 class="subtitle">{% trans 'date_planning' %}</h4>
+                <p class="subtitle-text">{% getattribute page 'date_planning' %}</p>
+            </div>
+            <div class="col-xs-3">
+                <h4 class="subtitle">{% trans 'date_realization' %}</h4>
+                <p class="subtitle-text">{% getattribute page 'date_realization' %}</p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div style="margin-top: 30px;">
+        <div class="row">
+            <div class="col-xs-3 text-left project-menu">
+                <div class="project-menu-item active">{% trans 'idea' %}</div>
+                <div class="project-menu-item">{% trans 'architectural_solutions' %}</div>
+            </div>
+            <div class="col-xs-6 page">
+
+                <h4 class="project-menu-item active">{% trans 'idea' %}</h4>
+                {% getattribute page 'idea' %}
+
+                <h4 class="project-menu-item active">{% trans 'architectural_solutions' %}</h4>
+                {% getattribute page 'content' %}
+
+                <p class="uppert bold smalltitle">{% trans 'projects_similar' %}</p>
+                {% for project_similar in projects_similar %}
+                <div class="col-xs-4 photo-item-small">
+                    <a href="{% url 'project_detail' slug=project_similar.slug %}">
+                        <img src="{{ project_similar.thumb.url }}" class="img-responsive" alt="">
+                        <div class="decr-small">
+                            <h3 class="photo-item-title-small">{% getattribute project_similar 'caption' %}</h3>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

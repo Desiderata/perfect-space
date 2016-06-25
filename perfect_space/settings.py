@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'perfect_space.apps.pages',
     'perfect_space.apps.publications',
     'perfect_space.apps.projects',
+    'perfect_space.apps.interiors',
     'perfect_space.apps.blog',
 ]
 
@@ -232,6 +233,7 @@ CKEDITOR_CONFIGS = {
             ['Image', 'Flash', 'Table', 'HorizontalRule'],
             ['TextColor', 'BGColor'],
             ['Smiley', 'SpecialChar'], ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'],
         ],
         'removePlugins': 'stylesheetparser',
         'contentsCss': '/static/admin/css/chkeditor-gallery.css',

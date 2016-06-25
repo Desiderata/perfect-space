@@ -7,25 +7,15 @@ from easy_thumbnails.files import get_thumbnailer
 from perfect_space.apps.pages.models import SEO
 
 
-class Project(SEO):
+class ProjectAbstract(models.Model):
     COVER_WIDTH = 1327
     COVER_HEIGHT = 710
     THUMB_WIDTH = 355
     THUMB_HEIGHT = 370
 
-    authors_ru = models.CharField(blank=True, max_length=1024, verbose_name='Авторы')
-    address_ru = models.CharField(blank=True, max_length=255, verbose_name='Расположение')
-    date_constructed_ru = models.CharField(blank=True, max_length=255, verbose_name='Дата постройки')
-    date_planning_ru = models.CharField(blank=True, max_length=255, verbose_name='Проектирование')
-    date_realization_ru = models.CharField(blank=True, max_length=255, verbose_name='Реализация')
     idea_ru = models.TextField(blank=True, verbose_name='Идея')
     content_ru = models.TextField(blank=True, verbose_name='Текст')
 
-    authors_en = models.CharField(blank=True, max_length=1024, verbose_name='Авторы')
-    address_en = models.CharField(blank=True, max_length=255, verbose_name='Расположение')
-    date_constructed_en = models.CharField(blank=True, max_length=255, verbose_name='Дата постройки')
-    date_planning_en = models.CharField(blank=True, max_length=255, verbose_name='Проектирование')
-    date_realization_en = models.CharField(blank=True, max_length=255, verbose_name='Реализация')
     idea_en = models.TextField(blank=True, verbose_name='Идея')
     content_en = models.TextField(blank=True, verbose_name='Текст')
 
@@ -73,6 +63,23 @@ class Project(SEO):
         self.cover_resize()
         self.thumb_resize()
         super().save(*args, **kwargs)
+
+    class Meta:
+        abstract = True
+
+
+class Project(SEO, ProjectAbstract):
+    authors_ru = models.CharField(blank=True, max_length=1024, verbose_name='Авторы')
+    address_ru = models.CharField(blank=True, max_length=255, verbose_name='Расположение')
+    date_constructed_ru = models.CharField(blank=True, max_length=255, verbose_name='Дата постройки')
+    date_planning_ru = models.CharField(blank=True, max_length=255, verbose_name='Проектирование')
+    date_realization_ru = models.CharField(blank=True, max_length=255, verbose_name='Реализация')
+
+    authors_en = models.CharField(blank=True, max_length=1024, verbose_name='Авторы')
+    address_en = models.CharField(blank=True, max_length=255, verbose_name='Расположение')
+    date_constructed_en = models.CharField(blank=True, max_length=255, verbose_name='Дата постройки')
+    date_planning_en = models.CharField(blank=True, max_length=255, verbose_name='Проектирование')
+    date_realization_en = models.CharField(blank=True, max_length=255, verbose_name='Реализация')
 
     class Meta:
         verbose_name = 'Проект'

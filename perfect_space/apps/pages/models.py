@@ -25,6 +25,7 @@ class Page(SEO):
         ('about', 'О Нас'),
         ('contacts', 'Контакты'),
         ('projects', 'Проекты'),
+        ('interiors', 'Интерьеры'),
         ('blog', 'Блог'),
     )
 
