@@ -6,12 +6,12 @@
     <div class="content center-block">
         <div class="margin-top"></div>
         <div class="center-block">
-            {% for project in projects %}
+            {% for interior in interiors %}
             <div class="col-xs-4 photo-item">
-                <a href="{% url 'project_detail' slug=project.slug %}">
-                    <img src="{{ project.thumb.url }}" class="img-responsive" alt="">
+                <a href="{% url 'project_detail' slug=interior.slug %}">
+                    <img src="{{ interior.thumb.url }}" class="img-responsive" alt="">
                     <div class="decr vertical-center-g">
-                        <h3 class="photo-item-title">{% getattribute project 'caption' %}</h3>
+                        <h3 class="photo-item-title">{% getattribute interior 'caption' %}</h3>
                     </div>
                 </a>
             </div>

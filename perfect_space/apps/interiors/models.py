@@ -12,3 +12,4 @@ class Interior(SEO, ProjectAbstract):
     class Meta:
         verbose_name = 'Интерьер'
         verbose_name_plural = 'Интерьеры'
+        ordering = ('-date_publication',)
