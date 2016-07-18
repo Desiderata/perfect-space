@@ -364,6 +364,9 @@ ul.unstyled li a {
     /*line-height: 2;*/
     font-size: 14px;
 }
+.about-image.img-responsive {
+    max-width: 100%;
+}
 
 #pub img {
     height: 274px;
@@ -411,7 +414,7 @@ ul.unstyled li a {
 }
 
 .img-small-slide {
-    /*max-height: 440px;*/
+    max-height: 440px;
     width: 100%;
 }
 

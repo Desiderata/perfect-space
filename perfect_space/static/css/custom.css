@@ -129,6 +129,12 @@ a:active {
 	transform: translate3d(0, 0, 0);
 }
 
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: auto !important;
+    max-width: none;
+    margin: 0 auto;
+}
+
 .col-xs-4.photo-item {
     padding-top: 15px;
 }
