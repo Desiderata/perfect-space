@@ -411,7 +411,7 @@ ul.unstyled li a {
 }
 
 .img-small-slide {
-    max-height: 440px;
+    /*max-height: 440px;*/
     width: 100%;
 }
 
