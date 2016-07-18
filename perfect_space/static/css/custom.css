@@ -59,7 +59,7 @@ a:active {
 .tags a {
     color: #808080;
     text-decoration: underline;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .media img {
@@ -129,7 +129,7 @@ a:active {
 	transform: translate3d(0, 0, 0);
 }
 
-.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+.thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     width: auto !important;
     max-width: none;
     margin: 0 auto;
@@ -189,6 +189,9 @@ a:active {
     cursor: pointer;
     color: #010101;
     font-weight: bold;
+}
+.project-other-caption {
+    margin-top: 85px;
 }
 
 .lang-link:hover {

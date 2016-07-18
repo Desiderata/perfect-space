@@ -364,9 +364,6 @@ ul.unstyled li a {
     /*line-height: 2;*/
     font-size: 14px;
 }
-.about-image.img-responsive {
-    max-width: 100%;
-}
 
 #pub img {
     height: 274px;

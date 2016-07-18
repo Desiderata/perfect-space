@@ -74,16 +74,16 @@
                 <h4 class="project-menu-item active">{% trans 'architectural_solutions' %}</h4>
                 {% getattribute page 'content' %}
 
-                <p class="uppert bold smalltitle">{% trans 'projects_similar' %}</p>
+                <p class="uppert bold smalltitle project-other-caption">{% trans 'projects_similar' %}</p>
                 {% for project_similar in projects_similar %}
-                <div class="col-xs-4 photo-item-small">
-                    <a href="{% url 'project_detail' slug=project_similar.slug %}">
-                        <img src="{{ project_similar.thumb.url }}" class="img-responsive" alt="">
-                        <div class="decr-small">
-                            <h3 class="photo-item-title-small">{% getattribute project_similar 'caption' %}</h3>
-                        </div>
-                    </a>
-                </div>
+                    <div class="col-xs-4 photo-item-small">
+                        <a href="{% url 'project_detail' slug=project_similar.slug %}">
+                            <img src="{{ project_similar.thumb.url }}" class="img-responsive project-other-image" alt="">
+                            <div class="decr-small">
+                                <h3 class="photo-item-title-small">{% getattribute project_similar 'caption' %}</h3>
+                            </div>
+                        </a>
+                    </div>
                 {% endfor %}
             </div>
         </div>
