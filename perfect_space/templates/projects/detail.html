@@ -20,24 +20,42 @@
             </p>
         </div>
         <div class="clearfix"></div>
-        <div style="margin-top: 40px;">
-            <div class="col-xs-3">
-                <h4 class="subtitle">{% trans 'address' %}</h4>
-                <p class="subtitle-text">{% getattribute page 'address' %}</p>
+        {% getattribute page 'date_constructed' as date_constructed %}
+        {% if date_constructed %}
+            <div style="margin-top: 40px;">
+                <div class="col-xs-3">
+                    <h4 class="subtitle">{% trans 'address' %}</h4>
+                    <p class="subtitle-text">{% getattribute page 'address' %}</p>
+                </div>
+                <div class="col-xs-3">
+                    <h4 class="subtitle">{% trans 'date_constructed' %}</h4>
+                    <p class="subtitle-text">{{ date_constructed }}</p>
+                </div>
+                <div class="col-xs-3">
+                    <h4 class="subtitle">{% trans 'date_planning' %}</h4>
+                    <p class="subtitle-text">{% getattribute page 'date_planning' %}</p>
+                </div>
+                <div class="col-xs-3">
+                    <h4 class="subtitle">{% trans 'date_realization' %}</h4>
+                    <p class="subtitle-text">{% getattribute page 'date_realization' %}</p>
+                </div>
             </div>
-            <div class="col-xs-3">
-                <h4 class="subtitle">{% trans 'date_constructed' %}</h4>
-                <p class="subtitle-text">{% getattribute page 'date_constructed' %}</p>
+        {% else %}
+            <div style="margin-top: 40px;">
+                <div class="col-xs-4">
+                    <h4 class="subtitle">{% trans 'address' %}</h4>
+                    <p class="subtitle-text">{% getattribute page 'address' %}</p>
+                </div>
+                <div class="col-xs-4">
+                    <h4 class="subtitle">{% trans 'date_planning' %}</h4>
+                    <p class="subtitle-text">{% getattribute page 'date_planning' %}</p>
+                </div>
+                <div class="col-xs-4">
+                    <h4 class="subtitle">{% trans 'date_realization' %}</h4>
+                    <p class="subtitle-text">{% getattribute page 'date_realization' %}</p>
+                </div>
             </div>
-            <div class="col-xs-3">
-                <h4 class="subtitle">{% trans 'date_planning' %}</h4>
-                <p class="subtitle-text">{% getattribute page 'date_planning' %}</p>
-            </div>
-            <div class="col-xs-3">
-                <h4 class="subtitle">{% trans 'date_realization' %}</h4>
-                <p class="subtitle-text">{% getattribute page 'date_realization' %}</p>
-            </div>
-        </div>
+        {% endif %}
         <div class="clearfix"></div>
     </div>
 
