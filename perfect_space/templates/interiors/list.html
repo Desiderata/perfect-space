@@ -8,7 +8,7 @@
         <div class="center-block">
             {% for interior in interiors %}
             <div class="col-xs-4 photo-item">
-                <a href="{% url 'project_detail' slug=interior.slug %}">
+                <a href="{% url 'interior_detail' slug=interior.slug %}">
                     <img src="{{ interior.thumb.url }}" class="img-responsive" alt="">
                     <div class="decr vertical-center-g">
                         <h3 class="photo-item-title">{% getattribute interior 'caption' %}</h3>
