@@ -369,6 +369,11 @@ ul.unstyled li a {
     height: 274px;
 }
 
+.nav-tabs {
+    display: table;
+    width: 100%;
+}
+
 .nav-tabs > li.active > a:before, .nav-tabs > li.active > a:after {
     background: url("../icons/round-icon.png") no-repeat center;
     background-size: 5px;
@@ -604,10 +609,13 @@ ul.unstyled li a {
 }
 
 .nav-tabs > li {
-    float: left;
+    width: 33%;
+    display: table-cell;
+    /*float: left;*/
     margin-bottom: -1px;
-    display: inline-block;
-    margin-left: 18%;
+    /*display: inline-block;*/
+    /*margin-left: 18%;*/
+    text-align: center;
 }
 
 .nav-tabs > li > a {
@@ -627,7 +635,7 @@ ul.unstyled li a {
 }
 
 .nav-tabs > li.last {
-    margin-left: 13%;
+    /*margin-left: 13%;*/
 }
 
 .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
