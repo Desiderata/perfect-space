@@ -8,9 +8,20 @@ Gallery.prototype.init = function() {
     if (!this.element) {
         return false;
     }
-
+    this.initGallery();
+    this.initPreview();
+};
+Gallery.prototype.initGallery = function() {
     var gallery = this.createGallery();
     this.element.parentNode.replaceChild(gallery, this.element);
+};
+Gallery.prototype.initPreview = function() {
+    $('.carousel-inner').lightGallery({
+        download: false,
+        thumbnail: true,
+        selector: '.gallery-link',
+        zoom: true
+    });
 };
 Gallery.prototype.createGallery = function() {
     var images = this.element.querySelectorAll('img');
@@ -83,6 +94,7 @@ Gallery.prototype.createSlides = function(images) {
         var slide = document.createElement('div');
         var link = this.createSlideLink(image);
 
+        link.classList.add('gallery-link');
         slide.className = i == 0 ? 'item active' : 'item';
         slide.appendChild(link);
         container.appendChild(slide);
@@ -93,7 +105,7 @@ Gallery.prototype.createSlides = function(images) {
 Gallery.prototype.createSlideLink = function(image) {
     var container = document.createElement('a');
     container.href = image.src;
-    container.setAttribute('data-lightbox', this.getId());
+    //container.setAttribute('data-lightbox', this.getId());
 
     var img = document.createElement('img');
     img.className = 'img-small-slide';

@@ -74,8 +74,8 @@ $(document).ready(function () {
         new ProjectMenu(projectMenu[0])
     }
 
-    lightbox.option({
-        disableScrolling: true,
-        fixedNavigation: true
-    });
+    //lightbox.option({
+    //    disableScrolling: true,
+    //    fixedNavigation: true
+    //});
 });
