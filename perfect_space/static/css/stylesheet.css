@@ -336,15 +336,6 @@ ul.unstyled li a {
     margin-right: 4px;
 }
 
-/* broken carousel */
-/*.prev {*/
-    /*padding-left: 30px !important;*/
-/*}*/
-
-/*.nxt {*/
-    /*padding-right: 46px !important;*/
-/*}*/
-
 .pager {
     margin-top: 9px;
 }
@@ -498,6 +489,26 @@ ul.unstyled li a {
     width: 7px;
     height: 7px;
     margin-left: 10px;
+}
+
+.carousel-fit .gallery-link {
+    position: relative;
+}
+.carousel-fit .gallery-link:after {
+    content: "\e20c";
+    display: block;
+    opacity: 0;
+    right: 12px;
+    top: 0;
+    font-family: lg;
+    font-size: 36px;
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0.4);
+    position: absolute;
+    will-change: opacity;
+    transition: opacity 250ms ease-in-out;
+}
+.carousel-fit .gallery-link:hover:after {
+    opacity: 1;
 }
 
 .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
