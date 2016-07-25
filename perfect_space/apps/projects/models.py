@@ -19,7 +19,7 @@ class ProjectAbstract(models.Model):
     idea_en = models.TextField(blank=True, verbose_name='Идея')
     content_en = models.TextField(blank=True, verbose_name='Текст')
 
-    date_publication = models.DateTimeField(default=datetime.now, verbose_name='Дата публикации')
+    date_publication = models.DateTimeField(default=datetime.now, verbose_name='Дата публикации', help_text='Сортировка по этому полю')
     slug = models.SlugField(max_length=100, db_index=True, unique=True, verbose_name='Псевдоним')
     cover = models.ImageField(upload_to='projects_cover/%Y/%m/%d/', verbose_name='Обложка')
     thumb = models.ImageField(blank=True, null=True, upload_to='projects_thumb/%Y/%m/%d/', verbose_name='Превью')
