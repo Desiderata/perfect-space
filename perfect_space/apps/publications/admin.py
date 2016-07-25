@@ -13,7 +13,7 @@ class PublicationImageInline(admin.StackedInline):
 class PublicationAdmin(admin.ModelAdmin):
     list_display = ('title_ru', 'description_ru',)
     readonly_fields = ('cover_preview',)
-    # inlines = (PublicationImageInline,)
+    inlines = (PublicationImageInline,)
 
     fieldsets = [
         (None, {

@@ -53,8 +53,8 @@ class PublicationImage(models.Model):
     IMAGE_WIDTH = 1920
     IMAGE_HEIGHT = 1200
 
-    # publication = models.ForeignKey(Publication, blank=True, related_name='images', verbose_name='Публикация')
-    image = models.ImageField(upload_to='publications_images/%Y/%m/%d/', verbose_name='Изображение')
+    publication = models.ForeignKey(Publication, related_name='images', verbose_name='Публикация')
+    image = models.ImageField(upload_to='publications_images/%Y/%m/%d/', blank=True, null=True, verbose_name='Изображение')
     order = models.SmallIntegerField(default=0, verbose_name='Порядок')
 
     def save(self, *args, **kwargs):
