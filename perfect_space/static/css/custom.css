@@ -4,6 +4,20 @@ a:active {
     color: #333;
 }
 
+body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 136px;
+}
+
+footer {
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
 .logo-image {
     width: 315px;
     height: 26px;

@@ -54,49 +54,47 @@
         <!-- Конец Меню -->
     </div>
     {% block content %}{% endblock %}
-    <div class="margin-top"></div>
-    <div class="content center-block">
-        <!-- Начало Подвала -->
-        <div data-page="footer">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 margin-bottom-20">
-                    <img src="{% static 'icons/round-icon.png' %}" class="center-block" alt="">
-                </div>
-            </div>
-            <div class="row footer">
-                <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4 text-center">
-                    <p>{% trans 'copyrights' %}</p>
-                </div>
-                <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4 text-center">
-                    <p>
-                        <a class="footer-link" href="phone:+79169360613">+7 (916) 936 06 13</a><br>
-                        <a class="footer-link" href="mailto:info@perfect-space.ru">info@perfect-space.ru</a>
-                    </p>
-                    <br><br>
-                    <div class="lang">
-                        {% if request.LANGUAGE_CODE == 'ru' %}
-                            {% language 'en' %}
-                                <p><strong>RUS</strong> / <a class="lang-link" href="{% change_lang 'en' %}">Eng</a></p>
-                            {% endlanguage %}
-                        {% else %}
-                            <p><a class="lang-link" href="{% change_lang 'ru' %}">Rus</a> / <strong>ENG</strong></p>
-                        {% endif %}
+</div>
 
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4 text-right">
-                    <ul class="list-inline social">
-                        <li><a href="https://www.facebook.com/Perfect-Sрасе-1752292051678225/?fref=ts" target="_blank"><img src="{% static 'icons/facebook-icon.png' %}" alt=""></a></li>
-                        <li><a href="https://www.instagram.com/perfect__space/" target="_blank"><img src="{% static 'icons/instagram-icon.png' %}" alt=""></a></li>
-                        <li><a href="https://ru.pinterest.com/zni1/?etslf=10731&eq=natalia%20s"><img src="{% static 'icons/p-icon.png' %}" alt=""></a></li>
-                    </ul>
-                </div>
+<footer>
+    <div class="content center-block">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 margin-bottom-20">
+                <img src="{% static 'icons/round-icon.png' %}" class="center-block" alt="">
             </div>
         </div>
-        <!-- Конец Подвала -->
+        <div class="row footer">
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4 text-center">
+                <p>{% trans 'copyrights' %}</p>
+            </div>
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4 text-center">
+                <p>
+                    <a class="footer-link" href="phone:+79169360613">+7 (916) 936 06 13</a><br>
+                    <a class="footer-link" href="mailto:info@perfect-space.ru">info@perfect-space.ru</a>
+                </p>
+                <br><br>
+                <div class="lang">
+                    {% if request.LANGUAGE_CODE == 'ru' %}
+                        {% language 'en' %}
+                            <p><strong>RUS</strong> / <a class="lang-link" href="{% change_lang 'en' %}">Eng</a></p>
+                        {% endlanguage %}
+                    {% else %}
+                        <p><a class="lang-link" href="{% change_lang 'ru' %}">Rus</a> / <strong>ENG</strong></p>
+                    {% endif %}
+
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4 text-right">
+                <ul class="list-inline social">
+                    <li><a href="https://www.facebook.com/Perfect-Sрасе-1752292051678225/?fref=ts" target="_blank"><img src="{% static 'icons/facebook-icon.png' %}" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/perfect__space/" target="_blank"><img src="{% static 'icons/instagram-icon.png' %}" alt=""></a></li>
+                    <li><a href="https://ru.pinterest.com/zni1/?etslf=10731&eq=natalia%20s"><img src="{% static 'icons/p-icon.png' %}" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
-<!-- Скрипты -->
+</footer>
+
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.js' %}"></script>
 <script src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
