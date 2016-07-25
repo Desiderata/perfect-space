@@ -211,6 +211,10 @@ footer {
 .project-list {
     margin-bottom: 80px;
 }
+.project-detail {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
 
 .lang-link:hover {
     font-weight: bold;
@@ -220,6 +224,10 @@ footer {
 
 .blog-description {
     font-size: 14px;
+}
+.blog-detail {
+    margin-top: 45px;
+    margin-bottom: 80px;
 }
 
 /* Lightgaller */
