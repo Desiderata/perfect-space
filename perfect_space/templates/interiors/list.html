@@ -5,7 +5,7 @@
 {% block content %}
     <div class="content center-block">
         <div class="margin-top"></div>
-        <div class="center-block">
+        <div class="project-list center-block clearfix">
             {% for interior in interiors %}
             <div class="col-xs-4 photo-item">
                 <a href="{% url 'interior_detail' slug=interior.slug %}">

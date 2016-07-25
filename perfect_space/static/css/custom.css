@@ -208,6 +208,9 @@ footer {
 .project-other-caption {
     margin-top: 85px;
 }
+.project-list {
+    margin-bottom: 80px;
+}
 
 .lang-link:hover {
     font-weight: bold;
