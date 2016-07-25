@@ -204,3 +204,13 @@ a:active {
 .blog-description {
     font-size: 14px;
 }
+
+/* Lightgaller */
+.lg-outer .lg-thumb-item {
+    border-radius: 0;
+    border: 1px solid #fff;
+}
+.lg-thumb.group {
+    margin-left: auto;
+    margin-right: auto;
+}
