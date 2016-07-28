@@ -468,6 +468,12 @@ ul.unstyled li a {
     background-color: #000;
 }
 
+.carousel-indicators {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+}
+
 .carousel-indicators li {
     border: 0px;
     background-color: #fff;
