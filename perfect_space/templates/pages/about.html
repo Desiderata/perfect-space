@@ -43,7 +43,14 @@
                     {% if publication.url %}
                         <a href="{{ publication.url }}"><img src="{{ publication.cover.url }}" class="img-responsive" alt=""></a>
                     {% else %}
-                        <a href=""><img src="{{ publication.cover.url }}" class="img-responsive" alt=""></a>
+                        <img src="{{ publication.cover.url }}" class="img-responsive publication-image" alt="">
+                        <div class="publication-gallery">
+                            <div class="gallery">
+                                {% for publication_image in publication.images.all %}
+                                    <img src="{{ publication_image.image.url }}">
+                                {% endfor %}
+                            </div>
+                        </div>
                     {% endif %}
                     <div class="clearfix"></div>
                     <h4 class="pubupper pubtitle bold">{% getattribute publication 'title' %}</h4>

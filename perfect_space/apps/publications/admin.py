@@ -17,7 +17,7 @@ class PublicationAdmin(admin.ModelAdmin):
 
     fieldsets = [
         (None, {
-            'fields': ['date', 'cover', 'cover_preview']
+            'fields': ['date', 'url', 'cover', 'cover_preview']
         }),
         ('Русский', {
             'fields': ['title_ru', 'description_ru']}),

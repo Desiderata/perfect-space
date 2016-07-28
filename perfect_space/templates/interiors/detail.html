@@ -47,12 +47,12 @@
                 {% getattribute page 'content' %}
 
                 <p class="uppert bold smalltitle">{% trans 'projects_similar' %}</p>
-                {% for project_similar in projects_similar %}
+                {% for interior_similar in interiors_similar %}
                 <div class="col-xs-4 photo-item-small">
-                    <a href="{% url 'project_detail' slug=project_similar.slug %}">
-                        <img src="{{ project_similar.thumb.url }}" class="img-responsive" alt="">
+                    <a href="{% url 'project_detail' slug=interior_similar.slug %}">
+                        <img src="{{ interior_similar.thumb.url }}" class="img-responsive" alt="">
                         <div class="decr-small">
-                            <h3 class="photo-item-title-small">{% getattribute project_similar 'caption' %}</h3>
+                            <h3 class="photo-item-title-small">{% getattribute interior_similar 'caption' %}</h3>
                         </div>
                     </a>
                 </div>

@@ -74,8 +74,14 @@ $(document).ready(function () {
         new ProjectMenu(projectMenu[0])
     }
 
-    //lightbox.option({
-    //    disableScrolling: true,
-    //    fixedNavigation: true
-    //});
+    var publicationImages = document.getElementsByClassName('publication-image');
+    for (var r=-1, p=publicationImages.length; ++r<p;) {
+        var publicationImage = publicationImages[r];
+        publicationImage.addEventListener('click', function(event) {
+            event.preventDefault();
+            var target = event.target;
+            var $gallery = $(target).next('.publication-gallery');
+            $gallery.find('.item a').click();
+        });
+    }
 });

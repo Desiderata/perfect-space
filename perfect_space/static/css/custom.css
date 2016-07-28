@@ -145,7 +145,7 @@ footer {
 
 .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     width: auto !important;
-    max-width: none;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -238,4 +238,12 @@ footer {
 .lg-thumb.group {
     margin-left: auto;
     margin-right: auto;
+}
+
+
+.publication-image {
+    cursor: pointer;
+}
+.publication-gallery {
+    display: none;
 }
