@@ -486,7 +486,7 @@ ul.unstyled li a {
 .carousel-indicators.small .active {
     background-color: #000;
     position: relative;
-    top: -1px;
+    top: -1px !important;
 }
 
 .carousel-indicators.small li {

@@ -41,7 +41,7 @@
                 {% for publication in publications %}
                 <div class="col-inline-4">
                     {% if publication.url %}
-                        <a href="{{ publication.url }}"><img src="{{ publication.cover.url }}" class="img-responsive" alt=""></a>
+                        <a href="{{ publication.url }}" target="_blank"><img src="{{ publication.cover.url }}" class="img-responsive" alt=""></a>
                     {% else %}
                         <img src="{{ publication.cover.url }}" class="img-responsive publication-image" alt="">
                         <div class="publication-gallery">

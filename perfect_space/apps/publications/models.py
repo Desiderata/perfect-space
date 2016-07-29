@@ -17,7 +17,7 @@ class Publication(models.Model):
 
     date = models.DateTimeField(default=datetime.now, blank=True, verbose_name='Дата', help_text='Сортировка по этому полю')
     url = models.CharField(max_length=255, blank=True, default='', verbose_name='Ссылка')
-    cover = models.ImageField(upload_to='publications_cover/%Y/%m/%d/', verbose_name='Обложка')
+    cover = models.ImageField(upload_to='publications_cover/%Y/%m/%d/', verbose_name='Обложка', help_text='Размер превью 200х274')
 
     def __str__(self):
         return self.title_ru
@@ -28,7 +28,7 @@ class Publication(models.Model):
 
     def cover_preview(self):
         cover_url = self.cover.url if self.cover else ''
-        return format_html('<img src="{0}" alt="" />', cover_url)
+        return format_html('<img style="max-width: 100%" src="{0}" alt="" />', cover_url)
     cover_preview.short_description = 'Превью'
 
     def cover_resize(self):
@@ -55,7 +55,6 @@ class PublicationImage(models.Model):
 
     publication = models.ForeignKey(Publication, related_name='images', verbose_name='Публикация')
     image = models.ImageField(upload_to='publications_images/%Y/%m/%d/', blank=True, null=True, verbose_name='Изображение')
-    order = models.SmallIntegerField(default=0, verbose_name='Порядок')
 
     def save(self, *args, **kwargs):
         self.image_resize()
@@ -63,7 +62,7 @@ class PublicationImage(models.Model):
 
     def image_preview(self):
         image_url = self.image.url if self.image else ''
-        return format_html('<img src="{0}" alt="" />', image_url)
+        return format_html('<img style="max-width: 100%" src="{0}" alt="" />', image_url)
     image_preview.short_description = 'Превью'
 
     def image_resize(self):
@@ -79,6 +78,6 @@ class PublicationImage(models.Model):
         os.remove(image.path)
 
     class Meta:
-        ordering = ('order', 'id')
+        ordering = ('id',)
         verbose_name = 'Изображение публикации'
         verbose_name_plural = 'Изображения публикации'

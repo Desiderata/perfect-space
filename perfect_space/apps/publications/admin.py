@@ -3,7 +3,7 @@ from django.contrib import admin
 from perfect_space.apps.publications.models import Publication, PublicationImage
 
 
-class PublicationImageInline(admin.StackedInline):
+class PublicationImageInline(admin.TabularInline):
     readonly_fields = ('image_preview',)
     model = PublicationImage
     min_num = 1

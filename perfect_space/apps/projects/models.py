@@ -29,12 +29,12 @@ class ProjectAbstract(models.Model):
 
     def cover_preview(self):
         cover_url = self.cover.url if self.cover else ''
-        return format_html('<img src="{0}" alt="" />', cover_url)
+        return format_html('<img style="max-width: 100%" src="{0}" alt="" />', cover_url)
     cover_preview.short_description = 'Превью'
 
     def thumb_preview(self):
         thumb_url = self.thumb.url if self.thumb else ''
-        return format_html('<img src="{0}" alt="" />', thumb_url)
+        return format_html('<img style="max-width: 100%" src="{0}" alt="" />', thumb_url)
     thumb_preview.short_description = 'Превью'
 
     def cover_resize(self):
