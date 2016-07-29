@@ -184,6 +184,14 @@ footer {
 .page h4:first-child {
     margin-top: 0;
 }
+.page h4 {
+    color: #010101;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
 .subtitle-text {
     font-size: 14px;
 }
