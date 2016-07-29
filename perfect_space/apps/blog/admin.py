@@ -13,6 +13,7 @@ class PostAdminForm(ModelForm):
             'keywords_ru': forms.TextInput(attrs={'style': 'width: 500px'}),
             'description_ru': forms.TextInput(attrs={'style': 'width: 500px'}),
             'caption_ru': forms.TextInput(attrs={'style': 'width: 500px'}),
+            'summary_ru': forms.Textarea(attrs={'style': 'width: 500px'}),
             'annotation_ru': forms.TextInput(attrs={'style': 'width: 500px'}),
             'content_ru': CKEditorUploadingWidget(),
 
@@ -20,6 +21,7 @@ class PostAdminForm(ModelForm):
             'keywords_en': forms.TextInput(attrs={'style': 'width: 500px'}),
             'description_en': forms.TextInput(attrs={'style': 'width: 500px'}),
             'caption_en': forms.TextInput(attrs={'style': 'width: 500px'}),
+            'summary_en': forms.Textarea(attrs={'style': 'width: 500px'}),
             'annotation_en': forms.TextInput(attrs={'style': 'width: 500px'}),
             'content_en': CKEditorUploadingWidget(),
         }
@@ -42,6 +44,7 @@ class PostAdmin(admin.ModelAdmin):
                 'keywords_ru',
                 'description_ru',
                 'caption_ru',
+                'summary_ru',
                 'annotation_ru',
                 'content_ru'
             ]}),
@@ -51,6 +54,7 @@ class PostAdmin(admin.ModelAdmin):
                 'keywords_en',
                 'description_en',
                 'caption_en',
+                'summary_en',
                 'annotation_en',
                 'content_en'
             ]}),
