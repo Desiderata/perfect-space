@@ -80,6 +80,9 @@ footer {
     margin-right: 12px;
 }
 
+.carousel-inner {
+    overflow: visible;
+}
 .carousel-inner .item {
     text-align: center;
 }

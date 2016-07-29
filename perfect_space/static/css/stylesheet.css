@@ -504,8 +504,8 @@ ul.unstyled li a {
     content: "\e20c";
     display: block;
     opacity: 0;
-    right: 12px;
-    top: 0;
+    right: -49px;
+    top: -15px;
     font-family: lg;
     font-size: 36px;
     text-shadow: 0 0 7px rgba(255, 255, 255, 0.4);
