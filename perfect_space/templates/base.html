@@ -3,7 +3,7 @@
 {% load getattr %}
 
 <html lang="{{ request.LANGUAGE_CODE }}">
-<head data-page="head">
+<head>
     <meta charset="UTF-8">
     <title>{% getattribute page 'title' %}</title>
     <meta name="keywords" content="">
@@ -21,7 +21,7 @@
 <body>
 <div class="container-fluid general clearfix">
     <div class="content center-block">
-        <div class="row" data-page="logo">
+        <div class="row">
             <div class="col-md-12">
                 <a href="{% url 'page_main' %}"><img src="{% static 'img/logo.svg' %}" class="center-block logo-image img-responsive" alt=""></a>
             </div>
@@ -30,7 +30,7 @@
         <div class="margin-top"></div>
 
         <!-- Начало Меню -->
-        <div class="row" data-page="menu">
+        <div class="row">
             <div class="col-md-12">
                 <ul id="menu" class="menu nav nav-justified">
                     <li class="first"><a href="{% url 'project_list' %}">{% trans 'menu_architecture' %}</a></li>

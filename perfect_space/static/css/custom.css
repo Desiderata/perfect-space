@@ -186,12 +186,15 @@ footer {
 }
 .page h4:first-child {
     margin-top: 0;
+    padding-top: 0;
 }
 .page h4 {
     color: #010101;
     font-family: Roboto, sans-serif;
     font-size: 14px;
     text-transform: uppercase;
+    padding-top: 15px;
+    margin-top: 0;
     margin-bottom: 8px;
     font-weight: bold;
 }
@@ -199,10 +202,14 @@ footer {
     font-size: 14px;
 }
 
+.project-content {
+    padding-top: 15px;
+}
 
 .project-menu {
     position: -webkit-sticky;
     position: sticky;
+    padding-top: 15px;
     top: 0;
 }
 .project-menu-item {
@@ -228,7 +235,7 @@ footer {
     margin-bottom: 80px;
 }
 .project-detail {
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 80px;
 }
 
