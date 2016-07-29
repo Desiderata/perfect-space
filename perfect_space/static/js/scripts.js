@@ -18,6 +18,9 @@ $(document).ready(function () {
         new ProjectMenu(projectMenu[0])
     }
 
+    // Stickyfill
+    $('.sticky').Stickyfill();
+
     var publicationImages = document.getElementsByClassName('publication-image');
     for (var r=-1, p=publicationImages.length; ++r<p;) {
         var publicationImage = publicationImages[r];

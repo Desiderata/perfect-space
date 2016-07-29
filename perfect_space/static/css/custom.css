@@ -197,6 +197,11 @@ footer {
 }
 
 
+.project-menu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
 .project-menu-item {
     color: #808080;
     font-family: Roboto, sans-serif;
