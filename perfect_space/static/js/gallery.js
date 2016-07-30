@@ -93,10 +93,12 @@ Gallery.prototype.createSlides = function(images) {
         var image = images[i];
         var slide = document.createElement('div');
         var link = this.createSlideLink(image);
+        var title = this.createTitle(image);
 
         link.classList.add('gallery-link');
         slide.className = i == 0 ? 'item active' : 'item';
         slide.appendChild(link);
+        slide.appendChild(title);
         container.appendChild(slide);
     }
 
@@ -114,6 +116,13 @@ Gallery.prototype.createSlideLink = function(image) {
     container.appendChild(img);
 
     return container;
+};
+Gallery.prototype.createTitle = function(image) {
+    var div = document.createElement('div');
+    div.className = 'gallery-title';
+    image.alt.length ? div.innerHTML = image.alt : div.classList.add('no-title');
+
+    return div;
 };
 Gallery.prototype.getId = function() {
     return 'carousel-' + this.id;

@@ -517,6 +517,15 @@ ul.unstyled li a {
     opacity: 1;
 }
 
+.gallery-title {
+    color: #636363;
+    padding-top: 20px;
+    font-size: 15px;
+}
+.gallery-title.no-title {
+    padding-top: 0;
+}
+
 .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     max-width: none;
 }

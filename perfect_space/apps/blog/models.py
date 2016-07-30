@@ -80,5 +80,6 @@ class Post(SEO):
         super().save(*args, **kwargs)
 
     class Meta:
+        ordering = ('-date', )
         verbose_name = 'Пост'
         verbose_name_plural = 'Посты'
