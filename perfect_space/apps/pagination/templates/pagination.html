@@ -1,0 +1,41 @@
+{% load pagination %}
+<ul class="pagination">
+    <li class="{% if not previous_page_number %}disabled{% endif %}"><a href="#">prev</a></li>
+
+    {% for p in pages %}
+        {% if p.is_current %}
+            <li class="active">
+                <a href="{{ request.META.PATH_INFO }}?{% url_replace 'page' p.num %}">{{ p.num }}</a>
+            </li>
+        {% elif p.num %}
+            <li>
+                <a href="{{ request.META.PATH_INFO }}?{% url_replace 'page' p.num %}">{{ p.num }}</a>
+            </li>
+        {% else %}
+            <li class="unavailable">&hellip;</li>
+        {% endif %}
+    {% endfor %}
+
+    <li class="{% if not next_page_number %}disabled{% endif %}"><a href="#">next</a></li>
+</ul>
+<ul class="pager">
+    <li class="previous disabled"><a href="#">Предыдущая</a></li>
+    <li>
+        <ul class="pagination">
+            {% for p in pages %}
+                {% if p.is_current %}
+                    <li class="active">
+                        <a href="{{ request.META.PATH_INFO }}?{% url_replace 'page' p.num %}">{{ p.num }}</a>
+                    </li>
+                {% elif p.num %}
+                    <li>
+                        <a href="{{ request.META.PATH_INFO }}?{% url_replace 'page' p.num %}">{{ p.num }}</a>
+                    </li>
+                {% else %}
+                    <li class="unavailable">&hellip;</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </li>
+    <li class="next"><a href="#">Следующая</a></li>
+</ul>

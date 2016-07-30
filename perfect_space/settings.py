@@ -49,11 +49,13 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'debug_toolbar',
 
+    'perfect_space.apps.pagination',
     'perfect_space.apps.pages',
     'perfect_space.apps.publications',
     'perfect_space.apps.projects',
     'perfect_space.apps.interiors',
     'perfect_space.apps.blog',
+    'perfect_space.apps.search',
 ]
 
 MIDDLEWARE_CLASSES = [

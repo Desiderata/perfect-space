@@ -21,6 +21,7 @@ from perfect_space.apps.blog.views import BlogList, BlogDetail
 from perfect_space.apps.interiors.views import InteriorDetail, InteriorList
 from perfect_space.apps.pages.views import PageView
 from perfect_space.apps.projects.views import ProjectDetail, ProjectList
+from perfect_space.apps.search.views import SearchList
 
 urlpatterns = [
     url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
@@ -36,6 +37,7 @@ urlpatterns += i18n_patterns(
     url(r'^interiors$', InteriorList.as_view(), name='interior_list'),
     url(r'^blog$', BlogList.as_view(), name='blog_list'),
     url(r'^blog/(?P<slug>[a-z\-0-9]+$)$', BlogDetail.as_view(), name='blog_detail'),
+    url(r'^search$', SearchList.as_view(), name='search_list'),
     url(r'^$', PageView.as_view(), kwargs={'slug': 'main'}, name='page_main'),
     url(r'^(?P<slug>[a-z\-0-9]+$)$', PageView.as_view(), name='page'),
 )

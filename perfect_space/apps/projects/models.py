@@ -1,5 +1,7 @@
 # coding=utf-8
 import os
+
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.datetime_safe import datetime
 from django.utils.html import format_html
@@ -80,6 +82,9 @@ class Project(SEO, ProjectAbstract):
     date_constructed_en = models.CharField(blank=True, max_length=255, verbose_name='Дата постройки')
     date_planning_en = models.CharField(blank=True, max_length=255, verbose_name='Проектирование')
     date_realization_en = models.CharField(blank=True, max_length=255, verbose_name='Реализация')
+
+    def get_absolute_url(self):
+        return reverse('project_detail', kwargs={'slug': self.slug})
 
     class Meta:
         verbose_name = 'Проект'

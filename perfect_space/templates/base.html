@@ -39,11 +39,11 @@
                     <li><a href="{% url 'page' slug='about' %}">{% trans 'menu_about' %}</a></li>
                     <li><a href="{% url 'page' slug='contacts' %}">{% trans 'menu_contacts' %}</a></li>
                     <li class="last">
-                        <form action="" method="get" role="form">
+                        <form action="{% url 'search_list' %}" method="get" role="form">
                             <div class="input-group search">
-                                <input type="text" class="form-control searchinput" placeholder="{% trans 'search' %}">
+                                <input type="text" name="q" class="form-control searchinput" placeholder="{% trans 'search' %}" value="{{ q }}">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default searchbutton" type="button"><img src="{% static 'icons/search-icon.png' %}" class="" alt=""></button>
+                                    <button class="btn btn-default searchbutton" type="submit"><img src="{% static 'icons/search-icon.png' %}" class="" alt=""></button>
                                 </span>
                             </div>
                         </form>

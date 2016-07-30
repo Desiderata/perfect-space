@@ -1,5 +1,7 @@
 # coding=utf-8
 import os
+
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.html import format_html
 from easy_thumbnails.files import get_thumbnailer
@@ -33,7 +35,7 @@ class Post(SEO):
     annotation_en = models.CharField(blank=True, max_length=1024, verbose_name='Аннотация')
     content_en = models.TextField(blank=True, verbose_name='Текст')
 
-    date = models.DateTimeField(verbose_name='Дата')
+    date_publication = models.DateTimeField(verbose_name='Дата публикации', help_text='Сортировка по этому полю')
     slug = models.SlugField(max_length=100, db_index=True, unique=True, verbose_name='Псевдоним')
     cover = models.ImageField(upload_to='projects_cover/%Y/%m/%d/', verbose_name='Обложка')
     thumb = models.ImageField(blank=True, null=True, upload_to='projects_thumb/%Y/%m/%d/', verbose_name='Превью')
@@ -79,7 +81,10 @@ class Post(SEO):
         self.thumb_resize()
         super().save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        return reverse('blog_detail', kwargs={'slug': self.slug})
+
     class Meta:
-        ordering = ('-date', )
+        ordering = ('-date_publication', )
         verbose_name = 'Пост'
         verbose_name_plural = 'Посты'

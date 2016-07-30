@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load getattr %}
+{% load pagination %}
+
+{% block content %}
+    <div class="row">
+    {% for result in results %}
+        <div class="col-xs-6 col-xs-offset-3 article">
+            <a href="{{ result.get_absolute_url }}"><h1 class="title">{% getattribute result 'caption' %}</h1></a>
+            <p>{% getattribute result 'content' 200 %}&hellip;</p>
+            <a href="{{ result.get_absolute_url }}" class="next">Читать дальше&hellip;</a>
+        </div>
+    {% empty %}
+        <div class="col-xs-6 col-xs-offset-3 article">
+            <div class="search-no-results">По вашему запросу ничего не найдено</div>
+        </div>
+    {% endfor %}
+
+
+    {% if is_paginated %}
+        <div class="col-xs-6 col-xs-offset-3">
+            {% pagination request paginator page_obj %}
+            <ul class="pager">
+                <li class="previous disabled"><a href="#">Предыдущая</a></li>
+                <li>
+                    <ul class="pagination">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li class="lastp"><a href="#">5</a></li>
+                    </ul>
+                </li>
+                <li class="next"><a href="#">Следующая</a></li>
+            </ul>
+        </div>
+    {% endif %}
+    </div>
+{% endblock %}

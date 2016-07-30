@@ -157,17 +157,26 @@ body {
 
 .article {
     margin-top: 40px;
-    width: 700px;
-    margin-left: 245px;
+    /*width: 700px;*/
+    /*margin-left: 245px;*/
 }
 
 .article p {
-    font-size: 12pt;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    text-align: justify;
 }
 
 .article .title {
-    font-size: 13pt;
+    font-size: 16px;
     text-transform: uppercase;
+}
+
+.article .next {
+    color: #808080;
 }
 
 .jumbotron.vertical-center {
@@ -288,9 +297,18 @@ body {
     padding: 0;
     padding-top: 5px;
 }
-.searchbutton:hover {
+.searchbutton:hover,
+.searchbutton:focus,
+.searchbutton:active,
+.searchbutton:active:focus {
     background: none;
+    box-shadow: none;
+    outline: none;
     border: 1px solid #fff;
+}
+
+.search-no-results {
+    text-align: center;
 }
 
 .nav-justified > .first {
@@ -311,12 +329,15 @@ ul.unstyled li a {
     text-decoration: underline;
 }
 
+.pager {
+    padding-top: 24px;
+}
 .pager li > a, .pager li > span {
     display: inline-block;
     padding: 5px 14px;
     background-color: transparent;
-    border: 0px;
-    border-radius: 0px;
+    border: 0;
+    border-radius: 0;
 }
 
 .pagination {
