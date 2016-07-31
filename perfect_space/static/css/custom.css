@@ -244,6 +244,7 @@ strong {
     margin-top: 85px;
     font-family: RobotoBold, sans-serif !important;
     font-weight: normal;
+    letter-spacing: normal !important;
 }
 .project-list {
     margin-bottom: 80px;
