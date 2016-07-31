@@ -28,17 +28,17 @@ a:hover {
 
 .title {
     margin-top: 0;
-    font-family: Roboto, sans-serif;
+    font-family: RobotoBold, sans-serif;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .subtitle {
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 0.55px;
-    font-family: Roboto, sans-serif;
-    font-weight: bold;
+    font-family: RobotoBold, sans-serif;
+    font-weight: normal;
     margin-bottom: 14px;
 }
 
@@ -72,18 +72,19 @@ a:hover {
 }
 
 .pubupper {
-    font-family: Roboto, sans-serif;
+    font-family: RobotoBold, sans-serif;
     text-transform: uppercase;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 1px;
 }
 
 .blogupper {
-    font-family: Roboto, sans-serif;
+    font-family: RobotoBold, sans-serif;
     text-transform: uppercase;
     font-size: 14px;
     margin-bottom: 8px;
+    font-weight: normal;
 }
 
 .pagination-upper {
@@ -373,10 +374,17 @@ ul.unstyled li a {
 .contact {
     margin-bottom: 270px;
 }
+.contact strong {
+    font-family: RobotoBold, sans-serif;
+    font-weight: normal;
+}
 
+.about {
+    padding-bottom: 40px;
+}
 .about .title {
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: normal;
     /*line-height: 2;*/
     font-size: 14px;
 }
@@ -416,7 +424,8 @@ ul.unstyled li a {
     font-size: 13px;
     text-transform: uppercase;
     color: #000;
-    font-weight: 700;
+    font-family: RobotoBold, sans-serif;
+    font-weight: normal;
 }
 
 .nav-tabs > li.active > a:hover {
@@ -542,7 +551,8 @@ ul.unstyled li a {
     opacity: 1;
 }
 
-.gallery-title {
+.gallery-title,
+.gallery-title a {
     color: #636363;
     padding-top: 20px;
     font-size: 15px;
@@ -632,7 +642,8 @@ ul.unstyled li a {
 .photo-item:hover .photo-item-title {
     text-transform: uppercase;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: normal;
+    font-family: RobotoBold, sans-serif;
     letter-spacing: 0.2px;
 }
 

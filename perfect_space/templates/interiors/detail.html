@@ -46,7 +46,7 @@
 
                 {% getattribute page 'content' %}
 
-                <p class="uppert bold smalltitle">{% trans 'projects_similar' %}</p>
+                <p class="uppert bold smalltitle project-other-caption">{% trans 'projects_similar' %}</p>
                 {% for interior_similar in interiors_similar %}
                 <div class="col-xs-4 photo-item-small">
                     <a href="{% url 'project_detail' slug=interior_similar.slug %}">

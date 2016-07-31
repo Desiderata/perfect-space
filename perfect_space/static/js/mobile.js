@@ -29,7 +29,7 @@ Mobile.prototype.onClickSwitch = function(event) {
     this.initDesktop();
 };
 Mobile.prototype.initMobile = function() {
-    document.body.style.minWidth = 'auto';
+    document.body.style.minWidth = '100%';
     document.body.style.width = '100%';
     document.body.style.paddingBottom = 0;
     this.addMeta();
