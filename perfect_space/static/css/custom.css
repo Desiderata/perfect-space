@@ -270,3 +270,27 @@ footer {
 .publication-gallery {
     display: none;
 }
+
+#cover,
+#desktop {
+    display: none;
+}
+.mobile-container {
+    padding-top: 40px;
+}
+.mobile-subtitle {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.mobile-description {
+    text-align: center;
+    line-height: 1;
+    margin: 20px 0 0;
+}
+.mobile-subtitle {
+    text-align: center;
+}
+.mobile-social {
+    margin: 20px auto 0;
+    text-align: center;
+}
