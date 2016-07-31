@@ -25,28 +25,7 @@ $(document).ready(function () {
     }
 
     // Mobile
-    var cover = document.getElementById('cover');
-    var desktop = document.getElementById('desktop');
-    var os = new OS();
-    if (os.android || os.ios) {
-        document.body.style.minWidth = 'auto';
-        document.body.style.width = '100%';
-        document.body.style.paddingBottom = 0;
-        cover.style.display = 'block';
-    }
-    else {
-        desktop.style.display = 'block';
-    }
-    var mobileSwitch = document.getElementById('mobile-switch');
-    mobileSwitch.addEventListener('click', function(event) {
-        event.preventDefault();
-        if (desktop.style.display = 'none') {
-            cover.style.display = 'none';
-            desktop.style.display = 'block';
-            fixMenuWidth();
-        }
-    });
-
+    new Mobile();
 
     // fix menu li width
     fixMenuWidth();
