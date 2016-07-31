@@ -218,6 +218,8 @@ strong {
     position: -webkit-sticky;
     position: sticky;
     padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 18px;
     top: 0;
 }
 .project-menu-item {

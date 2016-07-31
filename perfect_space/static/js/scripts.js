@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    // Mobile
+    new Mobile();
+
     var galleries = document.getElementsByClassName('gallery');
     var j = 0;
     while (galleries.length > 0) {
@@ -23,9 +26,6 @@ $(document).ready(function () {
             $gallery.find('.item a').click();
         });
     }
-
-    // Mobile
-    new Mobile();
 
     // fix menu li width
     fixMenuWidth();
