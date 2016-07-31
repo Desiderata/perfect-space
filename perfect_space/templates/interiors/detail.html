@@ -16,20 +16,33 @@
             <h1 class="headertitile">{% getattribute page 'caption' %}</h1>
         </div>
         <div class="clearfix"></div>
-        <div style="margin-top: 40px;">
-            <div class="col-xs-4">
-                <h4 class="subtitle">{% trans 'square' %}</h4>
-                <p class="subtitle-text">{{ page.square }}</p>
+        {% if page.bedrooms %}
+            <div style="margin-top: 40px;">
+                <div class="col-xs-4">
+                    <h4 class="subtitle">{% trans 'square' %}</h4>
+                    <p class="subtitle-text">{{ page.square }}</p>
+                </div>
+                <div class="col-xs-4">
+                    <h4 class="subtitle">{% trans 'ceil' %}</h4>
+                    <p class="subtitle-text">{{ page.ceil }}</p>
+                </div>
+                <div class="col-xs-4">
+                    <h4 class="subtitle">{% trans 'bedrooms' %}</h4>
+                    <p class="subtitle-text">{{ page.bedrooms }}</p>
+                </div>
             </div>
-            <div class="col-xs-4">
-                <h4 class="subtitle">{% trans 'ceil' %}</h4>
-                <p class="subtitle-text">{{ page.ceil }}</p>
+        {% else %}
+            <div style="margin-top: 40px;">
+                <div class="col-xs-3 col-xs-offset-3">
+                    <h4 class="subtitle">{% trans 'square' %}</h4>
+                    <p class="subtitle-text">{{ page.square }}</p>
+                </div>
+                <div class="col-xs-3">
+                    <h4 class="subtitle">{% trans 'ceil' %}</h4>
+                    <p class="subtitle-text">{{ page.ceil }}</p>
+                </div>
             </div>
-            <div class="col-xs-4">
-                <h4 class="subtitle">{% trans 'bedrooms' %}</h4>
-                <p class="subtitle-text">{{ page.bedrooms }}</p>
-            </div>
-        </div>
+        {% endif %}
         <div class="clearfix"></div>
     </div>
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-04 11:23+0300\n"
+"POT-Creation-Date: 2016-08-01 00:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,83 +17,100 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: perfect_space/settings.py:138
+#: perfect_space/settings.py:140
 msgid "lang_en"
 msgstr "Eng"
 
-#: perfect_space/settings.py:139
+#: perfect_space/settings.py:141
 msgid "lang_ru"
 msgstr "Rus"
 
-#: perfect_space/templates/base.html:36
+#: perfect_space/templates/base.html:83
 msgid "menu_architecture"
 msgstr "Architecture"
 
-#: perfect_space/templates/base.html:37
+#: perfect_space/templates/base.html:84
 msgid "menu_interior"
 msgstr "Interior"
 
-#: perfect_space/templates/base.html:38
+#: perfect_space/templates/base.html:85
 msgid "menu_blog"
 msgstr "Blog"
 
-#: perfect_space/templates/base.html:39
+#: perfect_space/templates/base.html:86
 msgid "menu_about"
 msgstr "About"
 
-#: perfect_space/templates/base.html:40
+#: perfect_space/templates/base.html:87
 msgid "menu_contacts"
 msgstr "Contacts"
 
-#: perfect_space/templates/base.html:44
+#: perfect_space/templates/base.html:91
 msgid "search"
 msgstr "Search"
 
-#: perfect_space/templates/base.html:68
+#: perfect_space/templates/base.html:115
 msgid "copyrights"
 msgstr "© Perfect Space 2015-2016, all rights reserved"
 
-#: perfect_space/templates/interiors/detail.html:21
+#: perfect_space/templates/interiors/detail.html:22
+#: perfect_space/templates/interiors/detail.html:37
 msgid "square"
-msgstr "Square"
+msgstr "Dimensions"
 
-#: perfect_space/templates/interiors/detail.html:25
+#: perfect_space/templates/interiors/detail.html:26
+#: perfect_space/templates/interiors/detail.html:41
 msgid "ceil"
-msgstr "Ceil"
+msgstr "Ceiling height"
 
-#: perfect_space/templates/interiors/detail.html:29
+#: perfect_space/templates/interiors/detail.html:30
 msgid "bedrooms"
 msgstr "Bedrooms"
 
-#: perfect_space/templates/interiors/detail.html:40
-#: perfect_space/templates/interiors/detail.html:44
-#: perfect_space/templates/projects/detail.html:48
-#: perfect_space/templates/projects/detail.html:53
+#: perfect_space/templates/interiors/detail.html:53
+#: perfect_space/templates/interiors/detail.html:57
+#: perfect_space/templates/projects/detail.html:66
+#: perfect_space/templates/projects/detail.html:71
 msgid "idea"
 msgstr "Idea"
 
-#: perfect_space/templates/interiors/detail.html:49
-#: perfect_space/templates/projects/detail.html:59
+#: perfect_space/templates/interiors/detail.html:62
+#: perfect_space/templates/projects/detail.html:77
 msgid "projects_similar"
 msgstr "Other projects"
 
-#: perfect_space/templates/projects/detail.html:25
+#: perfect_space/templates/pages/about.html:30
+msgid "professional_experience"
+msgstr "Professional Experience"
+
+#: perfect_space/templates/pages/about.html:31
+msgid "biography"
+msgstr "Biography"
+
+#: perfect_space/templates/pages/about.html:32
+msgid "publications"
+msgstr "Publications"
+
+#: perfect_space/templates/projects/detail.html:27
+#: perfect_space/templates/projects/detail.html:46
 msgid "address"
 msgstr "Location"
 
-#: perfect_space/templates/projects/detail.html:29
+#: perfect_space/templates/projects/detail.html:31
 msgid "date_constructed"
 msgstr "Constructed"
 
-#: perfect_space/templates/projects/detail.html:33
+#: perfect_space/templates/projects/detail.html:35
+#: perfect_space/templates/projects/detail.html:50
 msgid "date_planning"
-msgstr "Planning"
+msgstr "Project Development"
 
-#: perfect_space/templates/projects/detail.html:37
+#: perfect_space/templates/projects/detail.html:39
+#: perfect_space/templates/projects/detail.html:54
 msgid "date_realization"
-msgstr "Realization"
+msgstr "Reconstruction period"
 
-#: perfect_space/templates/projects/detail.html:49
-#: perfect_space/templates/projects/detail.html:56
+#: perfect_space/templates/projects/detail.html:67
+#: perfect_space/templates/projects/detail.html:74
 msgid "architectural_solutions"
 msgstr "Architectural and design solutions"

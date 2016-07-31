@@ -29,14 +29,14 @@ class PostAdminForm(ModelForm):
 
 class PostAdmin(admin.ModelAdmin):
     form = PostAdminForm
-    list_display = ('slug', 'date', 'caption_ru', 'description_ru',)
+    list_display = ('slug', 'date_publication', 'caption_ru', 'description_ru',)
     list_select_related = True
     readonly_fields = ('cover_preview', 'thumb_preview',)
     prepopulated_fields = {'slug': ('title_ru',)}
 
     fieldsets = [
         (None, {
-            'fields': ['date', 'slug', 'cover', 'cover_preview', 'thumb', 'thumb_preview', 'tags']
+            'fields': ['date_publication', 'slug', 'cover', 'cover_preview', 'thumb', 'thumb_preview', 'tags']
         }),
         ('Русский', {
             'fields': [

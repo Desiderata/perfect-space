@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load staticfiles %}
 {% load getattr %}
 
@@ -10,18 +11,15 @@
                 <img src="/static/img/about/lady.jpg" class="img-responsive" alt="">
             </div>
             <div class="col-xs-6">
-                <h1 class="title">PERFECT SPACE</h1>
-                <p>На сегодняшней день мной спроектировано и реализовано уже более 25 жилых и общественных объектов,
-                    около 20 интерьеров квартир и жилых домов. И продолжение профессионального пути я вижу в
-                    создании команды единомышленников. К своей цели (созданию компании) я шла долго, но уверенно. И
-                    сейчас рада представить PERFECT SPACE—отрытую для нового опыта и знакомств архитектурную
-                    мастерскую, которая не боится сложностей и уверенно развивается во многих направлениях. Помимо
-                    проектирования в ближайшее время мы планируем запустить собственную линию текстиля и аксессуаров
-                    для дома. И это только начало нашего творческого пути.</p>
-                <p>Наталья Самойлова—основатель и идейный вдохновитель архитектурной мастерской PERFECT SPACE;
-                    старший преподаватель Московского Архитектурного Института (кафедра «Архитектуры промышленных
-                    зданий и сооружений»); член Союза Московских Архитекторов; член жюри архитектурного конкурса
-                    Brick in the light.</p>
+                {% if request.LANGUAGE_CODE == 'ru' %}
+                    <h1 class="title">Добро пожаловать в PERFECT SPACE! </h1>
+                    <p>PERFECT SPACE – это архитектурная мастерская, всегда отрытая для новых знакомств и готовая к решению самых сложных задач. Основным направлением нашей деятельности является архитектурное проектирование, а главный принцип работы – создание оригинального, индивидуального, «ИДЕАЛЬНОГО  пространства»  для каждого  клиента, будь то решение для загородного дома или городских апартаментов. Мы стараемся услышать и найти персональный подход к каждому клиенту. Именно в этом взаимодействии рождается то, чего хочется и заказчику и нам. Если Вам близо наша философия – будем рады с Вами работать.</p>
+                    <p>Наталья Самойлова – основатель и идейный вдохновитель архитектурной мастерской PERFECT SPACE; старший преподаватель Московского Архитектурного Института (кафедра "Архитектуры промышленных зданий и сооружений"); член Союза Московских Архитекторов; член жюри архитектурного конкурса Brick in The Light.</p>
+                {% else %}
+                    <h1 class="title">Welcome to our studio!</h1>
+                    <p>PERFECT SPACE is an architectural studio open to new ideas and ready to work on the most challenging projects. Our primary focus is on architectural design and our mission is to create original, tailor-made, PERFECT space in every project be it a private country house or a city apartment. We take time to listen to our clients and understand their needs in order to offer the ideal design solution that would meet in full their vision and let us realize our full potential. Only in close cooperation we can achieve a PERFECT result. If you close our philosophy we will be pleased to work with you.</p>
+                    <p>Natalia Samoylova is the founder and creative heart of the PERFECT SPACE architectural studio; Moscow Architectural Institute senior professor (Industrial Architecture Department); Union of Moscow Architects member; Brick in The Light architectural design competition jury panel member.</p>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -29,9 +27,9 @@
     <div class="margin-top-120"></div>
     <div class="about clearfix">
         <ul class="nav nav-tabs text-center">
-            <li class="first"><a href="#exp" data-toggle="tab">Опыт работы</a></li>
-            <li class="active"><a href="#bib" data-toggle="tab">Библиография</a></li>
-            <li class="last"><a href="#pub" data-toggle="tab">Публикации</a></li>
+            <li class="first"><a href="#exp" data-toggle="tab">{% trans 'professional_experience' %}</a></li>
+            <li class="active"><a href="#bib" data-toggle="tab">{% trans 'biography' %}</a></li>
+            <li class="last"><a href="#pub" data-toggle="tab">{% trans 'publications' %}</a></li>
         </ul>
 
         <div class="tab-content content center-block">

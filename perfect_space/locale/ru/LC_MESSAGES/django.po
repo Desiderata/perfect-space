@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-04 11:23+0300\n"
+"POT-Creation-Date: 2016-08-01 00:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,83 +20,100 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: perfect_space/settings.py:138
+#: perfect_space/settings.py:140
 msgid "lang_en"
 msgstr "Eng"
 
-#: perfect_space/settings.py:139
+#: perfect_space/settings.py:141
 msgid "lang_ru"
 msgstr "Rus"
 
-#: perfect_space/templates/base.html:36
+#: perfect_space/templates/base.html:83
 msgid "menu_architecture"
 msgstr "Архитектура"
 
-#: perfect_space/templates/base.html:37
+#: perfect_space/templates/base.html:84
 msgid "menu_interior"
 msgstr "Интерьер"
 
-#: perfect_space/templates/base.html:38
+#: perfect_space/templates/base.html:85
 msgid "menu_blog"
 msgstr "Блог"
 
-#: perfect_space/templates/base.html:39
+#: perfect_space/templates/base.html:86
 msgid "menu_about"
 msgstr "О нас"
 
-#: perfect_space/templates/base.html:40
+#: perfect_space/templates/base.html:87
 msgid "menu_contacts"
 msgstr "Контакты"
 
-#: perfect_space/templates/base.html:44
+#: perfect_space/templates/base.html:91
 msgid "search"
 msgstr "Поиск"
 
-#: perfect_space/templates/base.html:68
+#: perfect_space/templates/base.html:115
 msgid "copyrights"
 msgstr "© Perfect Space 2015-2016, все права защищены"
 
-#: perfect_space/templates/interiors/detail.html:21
+#: perfect_space/templates/interiors/detail.html:22
+#: perfect_space/templates/interiors/detail.html:37
 msgid "square"
-msgstr "Площаль"
+msgstr "Площадь"
 
-#: perfect_space/templates/interiors/detail.html:25
+#: perfect_space/templates/interiors/detail.html:26
+#: perfect_space/templates/interiors/detail.html:41
 msgid "ceil"
 msgstr "Высота потолков"
 
-#: perfect_space/templates/interiors/detail.html:29
+#: perfect_space/templates/interiors/detail.html:30
 msgid "bedrooms"
 msgstr "Спален"
 
-#: perfect_space/templates/interiors/detail.html:40
-#: perfect_space/templates/interiors/detail.html:44
-#: perfect_space/templates/projects/detail.html:48
-#: perfect_space/templates/projects/detail.html:53
+#: perfect_space/templates/interiors/detail.html:53
+#: perfect_space/templates/interiors/detail.html:57
+#: perfect_space/templates/projects/detail.html:66
+#: perfect_space/templates/projects/detail.html:71
 msgid "idea"
 msgstr "Идея"
 
-#: perfect_space/templates/interiors/detail.html:49
-#: perfect_space/templates/projects/detail.html:59
+#: perfect_space/templates/interiors/detail.html:62
+#: perfect_space/templates/projects/detail.html:77
 msgid "projects_similar"
 msgstr "Другие проекты"
 
-#: perfect_space/templates/projects/detail.html:25
+#: perfect_space/templates/pages/about.html:30
+msgid "professional_experience"
+msgstr "Опыт работы"
+
+#: perfect_space/templates/pages/about.html:31
+msgid "biography"
+msgstr "Библиография"
+
+#: perfect_space/templates/pages/about.html:32
+msgid "publications"
+msgstr "Публикации"
+
+#: perfect_space/templates/projects/detail.html:27
+#: perfect_space/templates/projects/detail.html:46
 msgid "address"
 msgstr "Расположение"
 
-#: perfect_space/templates/projects/detail.html:29
+#: perfect_space/templates/projects/detail.html:31
 msgid "date_constructed"
 msgstr "Дата постройки"
 
-#: perfect_space/templates/projects/detail.html:33
+#: perfect_space/templates/projects/detail.html:35
+#: perfect_space/templates/projects/detail.html:50
 msgid "date_planning"
 msgstr "Проектирование"
 
-#: perfect_space/templates/projects/detail.html:37
+#: perfect_space/templates/projects/detail.html:39
+#: perfect_space/templates/projects/detail.html:54
 msgid "date_realization"
 msgstr "Реализация"
 
-#: perfect_space/templates/projects/detail.html:49
-#: perfect_space/templates/projects/detail.html:56
+#: perfect_space/templates/projects/detail.html:67
+#: perfect_space/templates/projects/detail.html:74
 msgid "architectural_solutions"
 msgstr "Архитектурно-конструктивные решения"
