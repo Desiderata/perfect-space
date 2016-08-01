@@ -311,3 +311,11 @@ strong {
     margin: 20px auto 0;
     text-align: center;
 }
+
+.search-query {
+    color: #808080;
+    padding: 30px 0 20px;
+    text-transform: uppercase;
+    font-family: RobotoBold, sans-serif;
+    font-weight: normal;
+}

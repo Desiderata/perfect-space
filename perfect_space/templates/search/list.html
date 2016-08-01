@@ -5,6 +5,11 @@
 
 {% block content %}
     <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <div class="search-query">{{ q }}</div>
+        </div>
+    </div>
+    <div class="row">
     {% for result in results %}
         <div class="col-xs-6 col-xs-offset-3 article">
             <a href="{{ result.get_absolute_url }}"><h1 class="title">{% getattribute result 'caption' %}</h1></a>
