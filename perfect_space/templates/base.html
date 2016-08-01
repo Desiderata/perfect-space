@@ -68,13 +68,13 @@
             <!-- Начало Меню -->
             <div class="row">
                 <div class="col-md-12">
-                    <ul id="menu" class="menu nav nav-justified">
-                        <li class="first"><a class="{% if request.resolver_match.url_name == 'project_list' %}active{% endif %}" href="{% url 'project_list' %}">{% trans 'menu_architecture' %}</a></li>
+                    <ul id="menu" class="menu">
+                        <li><a class="{% if request.resolver_match.url_name == 'project_list' %}active{% endif %}" href="{% url 'project_list' %}">{% trans 'menu_architecture' %}</a></li>
                         <li><a class="{% if request.resolver_match.url_name == 'interior_list' %}active{% endif %}" href="{% url 'interior_list' %}">{% trans 'menu_interior' %}</a></li>
                         <li><a class="{% if request.resolver_match.url_name == 'blog_list' %}active{% endif %}" href="{% url 'page' slug='blog' %}">{% trans 'menu_blog' %}</a></li>
                         <li><a class="{% if request.resolver_match.kwargs.slug == 'about' %}active{% endif %}" href="{% url 'page' slug='about' %}">{% trans 'menu_about' %}</a></li>
                         <li><a class="{% if request.resolver_match.kwargs.slug == 'contacts' %}active{% endif %}" href="{% url 'page' slug='contacts' %}">{% trans 'menu_contacts' %}</a></li>
-                        <li class="last">
+                        <li>
                             <form action="{% url 'search_list' %}" method="get" role="form">
                                 <div class="input-group search">
                                     <input type="text" name="q" class="form-control searchinput" placeholder="{% trans 'search' %}" value="{{ q }}">

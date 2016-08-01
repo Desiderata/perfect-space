@@ -31,14 +31,85 @@ strong {
     height: 26px;
 }
 
-.menu.nav > li {
-    white-space: nowrap;
-}
+/*.menu.nav > li {*/
+    /*white-space: nowrap;*/
+/*}*/
 
-.menu.nav > li > a:hover,
-.menu.nav > li > a.active,
-.menu.nav > li > a:focus {
-    display: block;
+/*.menu.nav > li > a:hover,*/
+/*.menu.nav > li > a.active,*/
+/*.menu.nav > li > a:focus {*/
+    /*display: block;*/
+    /*background-color: transparent;*/
+    /*color: #010101;*/
+    /*font-family: RobotoBold, sans-serif;*/
+    /*font-weight: normal;*/
+    /*text-transform: uppercase;*/
+    /*white-space: nowrap;*/
+    /*padding: 0 10px;*/
+/*}*/
+
+/*.menu.nav > li > a:hover:before,*/
+/*.menu.nav > li > a.active:before,*/
+/*.menu.nav > li > a:focus:before {*/
+    /*content: '•';*/
+    /*!*content: '';*!*/
+    /*!*width: 4px;*!*/
+    /*!*height: 4px;*!*/
+    /*!*background: url("../icons/round-icon.png") no-repeat center;*!*/
+    /*!*background-size: 4px 4px;*!*/
+    /*color: #010101;*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*!*top: 8px;*!*/
+    /*top: 0;*/
+/*}*/
+
+/*.menu.nav > li > a:hover:after,*/
+/*.menu.nav > li > a.active:after,*/
+/*.menu.nav > li > a:focus:after {*/
+    /*content: '•';*/
+    /*!*content: '';*!*/
+    /*!*width: 4px;*!*/
+    /*!*height: 4px;*!*/
+    /*!*background: url("../icons/round-icon.png") no-repeat center;*!*/
+    /*!*background-size: 4px 4px;*!*/
+    /*color: #010101;*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*!*top: 8px;*!*/
+    /*top: 0;*/
+/*}*/
+
+.menu {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    padding-left: 0;
+    padding-right: 15px;
+    list-style: none;
+}
+.menu form {
+    margin-bottom: 0;
+}
+.menu > li {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.menu > li:last-child {
+    width: 165px;
+    text-align: right;
+}
+.menu > li a {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+}
+.menu > li > a:hover,
+.menu > li > a.active,
+.menu > li > a:focus {
     background-color: transparent;
     color: #010101;
     font-family: RobotoBold, sans-serif;
@@ -47,21 +118,19 @@ strong {
     white-space: nowrap;
     padding: 0 10px;
 }
-
-.menu.nav > li > a:hover:before,
-.menu.nav > li > a.active:before,
-.menu.nav > li > a:focus:before {
+.menu > li > a:hover:before,
+.menu > li > a.active:before,
+.menu > li > a:focus:before {
     content: '•';
     color: #010101;
     display: block;
     position: absolute;
     left: 0;
-    top: 0;
 }
 
-.menu.nav > li > a:hover:after,
-.menu.nav > li > a.active:after,
-.menu.nav > li > a:focus:after {
+.menu > li > a:hover:after,
+.menu > li > a.active:after,
+.menu > li > a:focus:after {
     content: '•';
     color: #010101;
     display: block;
