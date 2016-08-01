@@ -1,6 +1,7 @@
 var Mobile = function() {
     this.cover = document.getElementById('cover');
     this.desktop = document.getElementById('desktop');
+    this.mobileCarousel = document.getElementById('mobile-carousel');
     this.mobileSwitch = document.getElementById('mobile-switch');
     this.disable = Cookies.get('mobile');
     this.init();
@@ -34,12 +35,20 @@ Mobile.prototype.initMobile = function() {
     document.body.style.paddingBottom = 0;
     this.addMeta();
     this.cover.style.display = 'block';
+    this.initSlick();
 };
 Mobile.prototype.initDesktop = function() {
     this.removeMeta();
     this.desktop.style.display = 'block';
     this.cover.style.display = 'none';
-    fixMenuWidth();
+};
+Mobile.prototype.initSlick = function() {
+    $(this.mobileCarousel).slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 1500
+        //fade: true
+    });
 };
 Mobile.prototype.addMeta = function() {
     var meta = document.createElement('meta');

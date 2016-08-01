@@ -26,16 +26,4 @@ $(document).ready(function () {
             $gallery.find('.item a').click();
         });
     }
-
-    // fix menu li width
-    fixMenuWidth();
 });
-
-function fixMenuWidth() {
-    //var menuItems = document.getElementById('menu').querySelectorAll('li');
-    //for (var i=-1, l=menuItems.length; ++i<l;) {
-    //    var item = menuItems[i];
-    //    item.style.width = item.clientWidth + 2 + 'px';
-    //    item.style.height = item.clientHeight + 'px';
-    //}
-}

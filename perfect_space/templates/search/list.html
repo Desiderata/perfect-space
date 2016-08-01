@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load staticfiles %}
 {% load getattr %}
 {% load pagination %}
@@ -6,7 +7,7 @@
 {% block content %}
     <div class="row">
         <div class="col-xs-6 col-xs-offset-3">
-            <div class="search-query">{{ q }}</div>
+            <div class="search-query"><span class="search-query-text">{% trans 'search_query' %}:</span> {{ q }}</div>
         </div>
     </div>
     <div class="row">
@@ -14,11 +15,11 @@
         <div class="col-xs-6 col-xs-offset-3 article">
             <a href="{{ result.get_absolute_url }}"><h1 class="title">{% getattribute result 'caption' %}</h1></a>
             <p>{% getattribute result 'content' 200 %}&hellip;</p>
-            <a href="{{ result.get_absolute_url }}" class="next">Читать дальше&hellip;</a>
+            <a href="{{ result.get_absolute_url }}" class="next">{% trans 'read_more' %}&hellip;</a>
         </div>
     {% empty %}
         <div class="col-xs-6 col-xs-offset-3 article">
-            <div class="search-no-results">По вашему запросу ничего не найдено</div>
+            <div class="search-no-results">{% trans 'search_not_found' %}</div>
         </div>
     {% endfor %}
 

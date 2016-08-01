@@ -399,12 +399,14 @@ strong {
     width: 100%;
 }
 .cover-carousel {
+    height: 76%;
     max-height: 76%;
     overflow: hidden;
 }
 .cover-carousel img {
     height: 100% !important;
     max-height: 100%;
+    margin: 0 auto;
 }
 .cover-footer {
     width: 100%;
@@ -417,10 +419,13 @@ strong {
 
 .search-query {
     color: #808080;
-    padding: 30px 0 20px;
+    padding: 60px 0 0;
     text-transform: uppercase;
     font-family: RobotoBold, sans-serif;
     font-weight: normal;
+}
+.search-query-text {
+    text-transform: none;
 }
 
 .soon {

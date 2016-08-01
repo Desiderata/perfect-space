@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-01 12:23+0300\n"
+"POT-Creation-Date: 2016-08-01 17:42+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,31 +25,31 @@ msgstr "Eng"
 msgid "lang_ru"
 msgstr "Rus"
 
-#: perfect_space/templates/base.html:83
+#: perfect_space/templates/base.html:88
 msgid "menu_architecture"
 msgstr "Architecture"
 
-#: perfect_space/templates/base.html:84
+#: perfect_space/templates/base.html:89
 msgid "menu_interior"
 msgstr "Interior"
 
-#: perfect_space/templates/base.html:85
+#: perfect_space/templates/base.html:90
 msgid "menu_blog"
 msgstr "Blog"
 
-#: perfect_space/templates/base.html:86
+#: perfect_space/templates/base.html:91
 msgid "menu_about"
 msgstr "About"
 
-#: perfect_space/templates/base.html:87
+#: perfect_space/templates/base.html:92
 msgid "menu_contacts"
 msgstr "Contacts"
 
-#: perfect_space/templates/base.html:91
+#: perfect_space/templates/base.html:96
 msgid "search"
 msgstr "Search"
 
-#: perfect_space/templates/base.html:115
+#: perfect_space/templates/base.html:120
 msgid "copyrights"
 msgstr "© Perfect Space 2015-2016, all rights reserved"
 
@@ -123,3 +123,15 @@ msgstr "Reconstruction period"
 #: perfect_space/templates/projects/detail.html:74
 msgid "architectural_solutions"
 msgstr "Architectural and design solutions"
+
+#: perfect_space/templates/search/list.html:10
+msgid "search_query"
+msgstr "Search result"
+
+#: perfect_space/templates/search/list.html:18
+msgid "read_more"
+msgstr "Read more"
+
+#: perfect_space/templates/search/list.html:22
+msgid "search_not_found"
+msgstr "No results for your query"

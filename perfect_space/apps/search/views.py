@@ -18,10 +18,33 @@ class SearchList(ListView):
     paginate_by = 20
 
     def get_queryset(self):
-        query = self.request.GET.get('q')
-        projects = Project.objects.filter(Q(content_ru__contains=query) | Q(content_en__contains=query))
-        interiors = Interior.objects.filter(Q(content_ru__contains=query) | Q(content_en__contains=query))
-        posts = Post.objects.filter(Q(content_ru__contains=query) | Q(content_en__contains=query))
+        query = self.request.GET.get('q', '')
+
+        projects = Project.objects.filter(
+            Q(idea_ru__contains=query) |
+            Q(idea_en__contains=query) |
+            Q(content_ru__contains=query) |
+            Q(content_en__contains=query) |
+            Q(caption_ru__contains=query) |
+            Q(caption_en__contains=query)
+        )
+
+        interiors = Interior.objects.filter(
+            Q(idea_ru__contains=query) |
+            Q(idea_en__contains=query) |
+            Q(content_ru__contains=query) |
+            Q(content_en__contains=query) |
+            Q(caption_ru__contains=query) |
+            Q(caption_en__contains=query)
+        )
+
+        posts = Post.objects.filter(
+            Q(content_ru__contains=query) |
+            Q(content_en__contains=query) |
+            Q(caption_ru__contains=query) |
+            Q(caption_en__contains=query)
+        )
+
         results = sorted(
             chain(projects, interiors, posts),
             key=attrgetter('date_publication'),
