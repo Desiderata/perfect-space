@@ -12,7 +12,9 @@ class InteriorDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['interiors_similar'] = Interior.objects.exclude(pk=self.object.pk)[:3]
+        context['interiors_similar'] = Interior.objects\
+                                           .filter(date_publication__lte=datetime.now())\
+                                           .exclude(pk=self.object.pk)[:3]
         return context
 
 

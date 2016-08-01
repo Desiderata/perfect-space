@@ -12,7 +12,9 @@ class ProjectDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['projects_similar'] = Project.objects.exclude(pk=self.object.pk)[:3]
+        context['projects_similar'] = Project.objects\
+                                          .filter(date_publication__lte=datetime.now())\
+                                          .exclude(pk=self.object.pk)[:3]
         return context
 
 
