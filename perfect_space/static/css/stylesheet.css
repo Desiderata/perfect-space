@@ -56,6 +56,10 @@ a:hover {
 
 .pubtitle {
     font-size: 11pt;
+    letter-spacing: normal;
+}
+.pubtitle.pubupper {
+    letter-spacing: normal;
 }
 
 .pubtext {
