@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-01 12:18+0300\n"
+"POT-Creation-Date: 2016-08-01 12:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,6 +82,11 @@ msgstr "Идея"
 msgid "projects_similar"
 msgstr "Другие проекты"
 
+#: perfect_space/templates/interiors/list.html:23
+#: perfect_space/templates/projects/list.html:23
+msgid "soon_project"
+msgstr "Скоро новый проект"
+
 #: perfect_space/templates/pages/about.html:30
 msgid "professional_experience"
 msgstr "Опыт работы"
@@ -93,6 +98,10 @@ msgstr "Библиография"
 #: perfect_space/templates/pages/about.html:32
 msgid "publications"
 msgstr "Публикации"
+
+#: perfect_space/templates/pages/about.html:61
+msgid "soon_publication"
+msgstr "Скоро новая публикация"
 
 #: perfect_space/templates/projects/detail.html:27
 #: perfect_space/templates/projects/detail.html:46
@@ -117,7 +126,3 @@ msgstr "Реализация"
 #: perfect_space/templates/projects/detail.html:74
 msgid "architectural_solutions"
 msgstr "Архитектурно-конструктивные решения"
-
-#: perfect_space/templates/projects/list.html:23
-msgid "soon_project"
-msgstr "Скоро новый проект"
