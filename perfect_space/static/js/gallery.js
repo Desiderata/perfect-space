@@ -107,7 +107,6 @@ Gallery.prototype.createSlides = function(images) {
 Gallery.prototype.createSlideLink = function(image) {
     var container = document.createElement('a');
     container.href = image.src;
-    //container.setAttribute('data-lightbox', this.getId());
 
     var img = document.createElement('img');
     img.className = 'img-small-slide';

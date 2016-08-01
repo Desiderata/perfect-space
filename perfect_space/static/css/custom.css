@@ -338,6 +338,13 @@ strong {
     margin-top: 45px;
     margin-bottom: 80px;
 }
+.blog-date {
+    margin-top: 15px;
+    font-size: 12px;
+}
+.blog-tags {
+    top: 30px;
+}
 
 /* Lightgaller */
 .lg-outer .lg-thumb-item {
