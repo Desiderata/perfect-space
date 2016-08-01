@@ -26,8 +26,8 @@ class Post(SEO):
     THUMB_WIDTH = 205
     THUMB_HEIGHT = 205
 
-    summary_ru = models.TextField(blank=True, max_length=200, verbose_name='Краткое описание')
-    summary_en = models.TextField(blank=True, max_length=200, verbose_name='Краткое описание')
+    summary_ru = models.TextField(blank=True, max_length=200, verbose_name='Краткое описание', help_text='Выводится на странице блога (список постов)')
+    summary_en = models.TextField(blank=True, max_length=200, verbose_name='Краткое описание', help_text='Выводится на странице блога (список постов)')
 
     annotation_ru = models.CharField(blank=True, max_length=1024, verbose_name='Аннотация')
     content_ru = models.TextField(blank=True, verbose_name='Текст')

@@ -603,16 +603,16 @@ ul.unstyled li a {
     font-weight: normal;
 }
 
-.photo-item-title-small:hover:before,
-.photo-item-title-small:hover:after {
-    background: url("../icons/round-icon.png") no-repeat center;
-    background-size: 5px;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    content: "";
-    background-position-y: 2px;
-}
+/*.photo-item-title-small:hover:before,*/
+/*.photo-item-title-small:hover:after {*/
+    /*background: url("../icons/round-icon.png") no-repeat center;*/
+    /*background-size: 5px;*/
+    /*display: inline-block;*/
+    /*width: 10px;*/
+    /*height: 10px;*/
+    /*content: "";*/
+    /*background-position-y: 2px;*/
+/*}*/
 
 .photo-item img {
     -webkit-filter: grayscale(100%);

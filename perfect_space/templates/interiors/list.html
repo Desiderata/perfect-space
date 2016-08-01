@@ -12,7 +12,7 @@
                 <a href="{% url 'interior_detail' slug=interior.slug %}">
                     <img src="{{ interior.thumb.url }}" class="img-responsive" alt="">
                     <div class="decr vertical-center-g">
-                        <h3 class="photo-item-title">{% getattribute interior 'caption' %}</h3>
+                        <h3 class="photo-item-title">{% getattribute interior 'caption' newlines=True %}</h3>
                     </div>
                 </a>
             </div>
