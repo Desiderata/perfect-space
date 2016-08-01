@@ -16,8 +16,11 @@ var ProjectMenu = function(element) {
 ProjectMenu.prototype.init = function() {
     this.menuItems = this.element.getElementsByClassName('project-menu-item');
     this.blockItems = document.querySelectorAll('.page h4');
-    this.initScrollTitles();
-    this.updateMenuItems();
+    this.projectCover = document.getElementById('project-cover');
+    this.projectCover.addEventListener('load', this.onCoverLoad.bind(this));
+    if (this.projectCover.complete) {
+        this.onCoverLoad();
+    }
 };
 ProjectMenu.prototype.initScrollTitles = function() {
     for (var i=-1, l=this.blockItems.length; ++i<l;) {
@@ -50,6 +53,10 @@ ProjectMenu.prototype.scrollEvent = function() {
 
 
 // Event functions
+ProjectMenu.prototype.onCoverLoad = function(event) {
+    this.initScrollTitles();
+    this.updateMenuItems();
+};
 ProjectMenu.prototype.onClickMenuItem = function(event) {
     event.preventDefault();
     var target = event.target;
@@ -59,6 +66,10 @@ ProjectMenu.prototype.onClickMenuItem = function(event) {
     this.gotoBlock(target.textContent);
 };
 ProjectMenu.prototype.onScroll = function(event) {
+    if (!Object.keys(this.scrollTitles).length){
+        return;
+    }
+
     var scrollY = window.scrollY;
     var title = '';
     for (var scroll in this.scrollTitles) {
@@ -70,7 +81,16 @@ ProjectMenu.prototype.onScroll = function(event) {
         break;
     }
     this.menuInactive();
-    this.menuActiveTtile(title);
+
+    if (scrollY + window.innerHeight >= document.body.parentElement.clientHeight) {
+        var titles = Object.keys(this.scrollTitles);
+        var lastTitleKey = titles[titles.length - 1];
+        var lastTitle = this.scrollTitles[lastTitleKey];
+        this.menuActiveTtile(lastTitle);
+    }
+    else {
+        this.menuActiveTtile(title);
+    }
 };
 
 
