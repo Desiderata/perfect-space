@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load staticfiles %}
 {% load getattr %}
 
@@ -16,8 +17,12 @@
                 </a>
             </div>
             {% endfor %}
-            <div class="col-xs-4 photo-item">
-                <img src="{% static 'img/gallary/soon.png' %}" class="img-responsive" alt="">
+            <div class="col-xs-4 photo-item soon">
+                <div class="soon-content">
+                    <div class="soon-cell">
+                        <div class="soon-text">{% trans 'soon_project' %}</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

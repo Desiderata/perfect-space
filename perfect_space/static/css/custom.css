@@ -319,3 +319,27 @@ strong {
     font-family: RobotoBold, sans-serif;
     font-weight: normal;
 }
+
+.soon {
+    cursor: default;
+}
+.soon-content {
+    width: 355px;
+    height: 370px;
+    display: table;
+    table-layout: fixed;
+    border: 1px dotted #9d9d9d;
+}
+.soon-cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.soon-text {
+    display: inline-block;
+    color: #fff;
+    padding: 50px 40px;
+    background-color: #000;
+    font-size: 15px;
+    text-transform: uppercase;
+}
