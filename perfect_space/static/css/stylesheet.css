@@ -193,7 +193,14 @@ body {
 }
 
 .footer ul.social {
-    padding-right: 108px;
+    text-align: right;
+}
+ul.social {
+    text-align: center;
+}
+ul.social img {
+    width: 21px;
+    height: 21px;
 }
 
 .footer-link:hover {
