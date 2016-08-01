@@ -317,8 +317,11 @@ strong {
     overflow: hidden;
 }
 .cover-carousel {
-    /*max-height: 50%;*/
+    max-height: 60%;
     /*overflow: hidden;*/
+}
+.cover-carousel img {
+    max-height: 100%;
 }
 .cover-footer {
     width: 100%;
