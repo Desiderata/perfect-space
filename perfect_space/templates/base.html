@@ -23,14 +23,13 @@
     <div class="container mobile-container">
         <div class="row">
             <div class="col-xs-12" style="padding-left: 15px;">
-                <a href="{% url 'page_main' %}"><img src="{% static 'img/logo.svg' %}" class="center-block logo-image img-responsive" alt=""></a>
-                <div class="mobile-subtitle">Architecture & Interior</div>
+                <a class="cover-logo" href="{% url 'page_main' %}"><img src="{% static 'img/logo_full.svg' %}" class="center-block img-responsive" alt=""></a>
             </div>
         </div>
         <div class="row">
             <div class="carousel-inner cover-carousel">
                 <div class="item active">
-                    <img src="{% static 'img/mobile.jpg' %}" class="img-slide" alt="">
+                    <img style="height: 100% !important;" src="{% static 'img/mobile.jpg' %}" class="img-slide" alt="">
                 </div>
             </div>
         </div>
