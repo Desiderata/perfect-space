@@ -12,7 +12,7 @@
                 <a href="{% url 'project_detail' slug=project.slug %}">
                     <img src="{{ project.thumb.url }}" class="img-responsive" alt="">
                     <div class="decr vertical-center-g">
-                        <h3 class="photo-item-title">{% getattribute project 'caption' %}</h3>
+                        <h3 class="photo-item-title">{% getattribute project 'caption' newlines=True %}</h3>
                     </div>
                 </a>
             </div>

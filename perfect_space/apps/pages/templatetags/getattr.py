@@ -8,12 +8,15 @@ register = template.Library()
 
 
 @register.simple_tag(takes_context=True)
-def getattribute(context, obj, attribute, length=None):
+def getattribute(context, obj, attribute, length=None, newlines=False):
     lang = translation.get_language()
     content = getattr(obj, '{}_{}'.format(attribute, lang))
 
     if length:
         content = strip_tags(content)[:length]
+
+    if newlines:
+        content = content.replace('\n', '<br />')
 
     return mark_safe(content)
 

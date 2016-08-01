@@ -13,14 +13,14 @@ class InteriorAdminForm(ModelForm):
             'title_ru': forms.TextInput(attrs={'style': 'width: 500px'}),
             'keywords_ru': forms.TextInput(attrs={'style': 'width: 500px'}),
             'description_ru': forms.TextInput(attrs={'style': 'width: 500px'}),
-            'caption_ru': forms.TextInput(attrs={'style': 'width: 500px'}),
+            'caption_ru': forms.Textarea(attrs={'style': 'width: 500px'}),
             'idea_ru': CKEditorUploadingWidget(),
             'content_ru': CKEditorUploadingWidget(),
 
             'title_en': forms.TextInput(attrs={'style': 'width: 500px'}),
             'keywords_en': forms.TextInput(attrs={'style': 'width: 500px'}),
             'description_en': forms.TextInput(attrs={'style': 'width: 500px'}),
-            'caption_en': forms.TextInput(attrs={'style': 'width: 500px'}),
+            'caption_en': forms.Textarea(attrs={'style': 'width: 500px'}),
             'idea_en': CKEditorUploadingWidget(),
             'content_en': CKEditorUploadingWidget(),
         }
