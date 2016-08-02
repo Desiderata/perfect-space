@@ -1,10 +1,21 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load staticfiles %}
 {% load getattr %}
 
 {% block content %}
     <div class="content center-block clearfix">
         <div class="margin-top-86"></div>
+        {% if tag %}
+            <div class="row blog-tag-current">
+                <div class="col-xs-6 text-left">
+                    {{ tag }}
+                </div>
+                <div class="col-xs-6 text-right">
+                    <i><a href="{% url 'blog_tags' %}" class="gray">{% trans 'show_tags' %}</a></i>
+                </div>
+            </div>
+        {% endif %}
         {% for post in posts %}
             <div class="col-inline-6">
                 <div class="media">

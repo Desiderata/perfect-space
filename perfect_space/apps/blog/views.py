@@ -30,8 +30,10 @@ class BlogList(ListView):
         return query
 
     def get_context_data(self, **kwargs):
+        tag_id = self.request.GET.get('tag')
         context = super().get_context_data(**kwargs)
         context['page'] = Page.objects.get(slug=self.slug)
+        context['tag'] = Tag.objects.get(pk=tag_id) if tag_id else None
         return context
 
 

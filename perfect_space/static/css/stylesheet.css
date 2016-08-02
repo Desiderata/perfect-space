@@ -925,7 +925,10 @@ ul.unstyled li a {
     border-bottom: 1px solid #000;
     line-height: 16px;
 }
-.tag-item a:hover {
+.tag-item a:hover,
+.tag-item a:active,
+.tag-item a:focus
+{
     text-decoration: none;
 }
 

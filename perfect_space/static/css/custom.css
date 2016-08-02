@@ -345,6 +345,10 @@ strong {
 .blog-tags {
     top: 30px;
 }
+.blog-tag-current {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
 
 /* Lightgaller */
 .lg-outer .lg-thumb-item {
