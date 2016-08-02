@@ -900,9 +900,10 @@ ul.unstyled li a {
     margin-bottom: 0;
     text-decoration: underline;
 }
-.tags-list {
-    max-width: 650px;
+.tags-list-container {
     margin-left: 60px;
+}
+.tags-list {
     padding-left: 0;
 }
 
@@ -913,8 +914,8 @@ ul.unstyled li a {
     list-style-type: none;
     font-size: 12px;
     margin-top: 14px;
-    margin-left: 100px;
-    float: left;
+    /*margin-left: 100px;*/
+    /*float: left;*/
 }
 .tag-item:nth-child(3n + 1) {
     margin-left: 0;

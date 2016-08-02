@@ -5,12 +5,38 @@ from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.html import format_html
 from easy_thumbnails.files import get_thumbnailer
+from math import ceil, floor
+
 from perfect_space.apps.pages.models import SEO
 
 
 class Tag(models.Model):
     name_ru = models.CharField(max_length=255, verbose_name='Имя')
     name_en = models.CharField(max_length=255, verbose_name='Имя')
+
+    @classmethod
+    def regroup(cls, tags):
+        columns = 3
+        total = tags.count()
+        part = ceil(total / columns)
+        stop = part
+        tags_list = []
+        column = 1
+
+        for i, tag in enumerate(tags, 1):
+            tags_list.append({
+                'id': tag.id,
+                'name_ru': tag.name_ru,
+                'name_en': tag.name_en,
+                'column': column,
+            })
+
+            if stop <= i < total:
+                part = ceil((total - stop) / (columns - column))
+                stop = i + part
+                column += 1
+
+        return tags_list
 
     def __str__(self):
         return self.name_ru

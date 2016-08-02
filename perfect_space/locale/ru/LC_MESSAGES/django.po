@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-01 17:42+0300\n"
+"POT-Creation-Date: 2016-08-02 15:20+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,6 +55,10 @@ msgstr "Поиск"
 #: perfect_space/templates/base.html:120
 msgid "copyrights"
 msgstr "© Perfect Space 2015-2016, все права защищены"
+
+#: perfect_space/templates/blog/detail.html:27
+msgid "show_tags"
+msgstr "показать все теги"
 
 #: perfect_space/templates/interiors/detail.html:22
 #: perfect_space/templates/interiors/detail.html:37

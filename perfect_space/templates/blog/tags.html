@@ -7,11 +7,18 @@
         <div style="margin-top: 40px;"></div>
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
-                <ul class="tags-list clearfix">
-                    {% for tag in tags %}
-                        <li class="tag-item"><a href="{% url 'blog_list' %}?tag={{ tag.id }}">{% getattribute tag 'name' %}</a></li>
+                <div class="row tags-list-container">
+                    {% regroup tags by column as tags_columns %}
+                    {% for column in tags_columns %}
+                        <div class="col-xs-4 col-xs-offset">
+                            <ul class="tags-list clearfix">
+                                {% for tag in column.list %}
+                                    <li class="tag-item"><a href="{% url 'blog_list' %}?tag={{ tag.id }}">{% getattribute tag 'name' %}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     {% endfor %}
-                </ul>
+                </div>
             </div>
         </div>
     </div>

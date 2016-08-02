@@ -87,7 +87,7 @@
                     <ul id="menu" class="menu">
                         <li><a class="{% if request.resolver_match.url_name in 'project_list, project_detail' %}active{% endif %}" href="{% url 'project_list' %}">{% trans 'menu_architecture' %}</a></li>
                         <li><a class="{% if request.resolver_match.url_name in 'interior_list, interior_detail' %}active{% endif %}" href="{% url 'interior_list' %}">{% trans 'menu_interior' %}</a></li>
-                        <li><a class="{% if request.resolver_match.url_name in 'blog_list, blog_detail' %}active{% endif %}" href="{% url 'page' slug='blog' %}">{% trans 'menu_blog' %}</a></li>
+                        <li><a class="{% if request.resolver_match.url_name in 'blog_list, blog_detail, blog_tags' %}active{% endif %}" href="{% url 'page' slug='blog' %}">{% trans 'menu_blog' %}</a></li>
                         <li><a class="{% if request.resolver_match.kwargs.slug == 'about' %}active{% endif %}" href="{% url 'page' slug='about' %}">{% trans 'menu_about' %}</a></li>
                         <li><a class="{% if request.resolver_match.kwargs.slug == 'contacts' %}active{% endif %}" href="{% url 'page' slug='contacts' %}">{% trans 'menu_contacts' %}</a></li>
                         <li>

@@ -1,4 +1,6 @@
 # coding=utf-8
+from collections import OrderedDict
+
 from django.views.generic import ListView, DetailView
 from perfect_space.apps.blog.models import Post, Tag
 from perfect_space.apps.pages.models import Page
@@ -38,6 +40,12 @@ class BlogTags(ListView):
     context_object_name = 'tags'
     template_name = 'blog/tags.html'
     slug = 'blog_tags'
+
+    def get_queryset(self):
+        lang = self.request.LANGUAGE_CODE
+        tags_query = Tag.objects.order_by('name_{}'.format(lang))
+        tags = Tag.regroup(tags_query)
+        return tags
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
