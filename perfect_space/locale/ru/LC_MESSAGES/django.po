@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-02 15:20+0300\n"
+"POT-Creation-Date: 2016-08-02 18:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +20,11 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: perfect_space/settings.py:140
+#: perfect_space/settings.py:141
 msgid "lang_en"
 msgstr "Eng"
 
-#: perfect_space/settings.py:141
+#: perfect_space/settings.py:142
 msgid "lang_ru"
 msgstr "Rus"
 
@@ -56,9 +56,14 @@ msgstr "Поиск"
 msgid "copyrights"
 msgstr "© Perfect Space 2015-2016, все права защищены"
 
-#: perfect_space/templates/blog/detail.html:27
+#: perfect_space/templates/blog/detail.html:28
+#: perfect_space/templates/blog/list.html:13
 msgid "show_tags"
 msgstr "показать все теги"
+
+#: perfect_space/templates/blog/list.html:11
+msgid "tag_name"
+msgstr "тег"
 
 #: perfect_space/templates/interiors/detail.html:22
 #: perfect_space/templates/interiors/detail.html:37

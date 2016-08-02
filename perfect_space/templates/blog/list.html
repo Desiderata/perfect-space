@@ -8,9 +8,7 @@
         <div class="margin-top-86"></div>
         {% if tag %}
             <div class="row blog-tag-current">
-                <div class="col-xs-6 text-left">
-                    {{ tag }}
-                </div>
+                <div class="col-xs-6 text-left">{% trans 'tag_name' %}: {{ tag }}</div>
                 <div class="col-xs-6 text-right">
                     <i><a href="{% url 'blog_tags' %}" class="gray">{% trans 'show_tags' %}</a></i>
                 </div>
