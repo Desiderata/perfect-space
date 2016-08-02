@@ -27,6 +27,7 @@ class Page(SEO):
         ('projects', 'Проекты'),
         ('interiors', 'Интерьеры'),
         ('blog', 'Блог'),
+        ('blog_tags', 'Блог Теги'),
         ('search', 'Поиск'),
     )
 

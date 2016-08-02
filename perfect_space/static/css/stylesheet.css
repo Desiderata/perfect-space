@@ -846,12 +846,6 @@ ul.unstyled li a {
     border: 0px !important;
 }
 
-.tag-item {
-    list-style-type: none;
-    font-size: 12pt;
-    margin-top: 9px;
-}
-
 .col-xs-own-3 {
     margin-left: 12%;
     width: 11%;
@@ -905,6 +899,33 @@ ul.unstyled li a {
     bottom: 0;
     margin-bottom: 0;
     text-decoration: underline;
+}
+.tags-list {
+    max-width: 650px;
+    margin-left: 60px;
+    padding-left: 0;
+}
+
+.tag-item {
+    width: 130px;
+    display: inline-block;
+    color: #000;
+    list-style-type: none;
+    font-size: 12px;
+    margin-top: 14px;
+    margin-left: 100px;
+    float: left;
+}
+.tag-item:nth-child(3n + 1) {
+    margin-left: 0;
+}
+.tag-item a {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    line-height: 16px;
+}
+.tag-item a:hover {
+    text-decoration: none;
 }
 
 .moc {

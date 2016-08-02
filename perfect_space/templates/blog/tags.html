@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load getattr %}
+
+{% block content %}
+    <div class="content center-block clearfix">
+        <div style="margin-top: 40px;"></div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <ul class="tags-list clearfix">
+                    {% for tag in tags %}
+                        <li class="tag-item"><a href="{% url 'blog_list' %}?tag={{ tag.id }}">{% getattribute tag 'name' %}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
