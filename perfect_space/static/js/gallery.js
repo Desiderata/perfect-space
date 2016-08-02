@@ -29,9 +29,11 @@ Gallery.prototype.createGallery = function() {
     var slides = this.createSlides(images);
     var container = this.createContainer();
 
-    container.appendChild(indicators);
     container.appendChild(slides);
-    container = this.createControls(container);
+    if (images.length > 1) {
+        container.appendChild(indicators);
+        container = this.createControls(container);
+    }
 
     return container;
 };
