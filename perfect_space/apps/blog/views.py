@@ -21,6 +21,12 @@ class BlogList(ListView):
     template_name = 'blog/list.html'
     slug = 'blog'
 
+    def get_queryset(self):
+        tag = self.request.GET.get('tag')
+        query = Post.objects.filter(tags__id__in=[tag]) if tag else Post.objects.all()
+
+        return query
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['page'] = Page.objects.get(slug=self.slug)
