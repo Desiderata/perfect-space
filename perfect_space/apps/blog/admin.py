@@ -1,9 +1,11 @@
 # coding=utf-8
+from adminsortable2.admin import SortableAdminMixin
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django import forms
 from django.contrib import admin
 from django.forms import ModelForm
 from perfect_space.apps.blog.models import Post, Tag
+from perfect_space.apps.pages.models import MainImage
 
 
 class PostAdminForm(ModelForm):
@@ -72,3 +74,14 @@ class TagAdmin(admin.ModelAdmin):
             'fields': ['name_en']}),
     ]
 admin.site.register(Tag, TagAdmin)
+
+
+class MainImageAdmin(SortableAdminMixin, admin.ModelAdmin):
+    list_display = ('cover_preview',)
+    readonly_fields = ('cover_preview',)
+    fieldsets = [
+        (None, {
+            'fields': ['cover', 'cover_preview',]
+        }),
+    ]
+admin.site.register(MainImage, MainImageAdmin)

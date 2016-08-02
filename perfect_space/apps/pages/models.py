@@ -1,7 +1,11 @@
 # coding=utf-8
+import os
+
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.template.defaultfilters import slugify
+from django.utils.html import format_html
+from easy_thumbnails.files import get_thumbnailer
 
 
 class SEO(models.Model):
@@ -46,3 +50,36 @@ class Page(SEO):
     class Meta:
         verbose_name = 'Страница'
         verbose_name_plural = 'Страницы'
+
+
+class MainImage(models.Model):
+    COVER_WIDTH = 1216
+    COVER_HEIGHT = 780
+
+    cover = models.ImageField(upload_to='main_slides/%Y/%m/%d/', verbose_name='Изображение')
+    order = models.PositiveIntegerField(default=0, blank=False, null=False, verbose_name='Порядок')
+
+    def __str__(self):
+        return str(self.id)
+
+    def cover_preview(self):
+        cover_url = self.cover.url if self.cover else ''
+        return format_html('<img style="max-width: 200px;" src="{0}" alt="" />', cover_url)
+    cover_preview.short_description = 'Превью'
+
+    def cover_resize(self):
+        if not self.cover:
+            return
+
+        thumb = get_thumbnailer(self.cover.file, self.cover.file.name)
+        cover = thumb.get_thumbnail({
+            'size': (self.COVER_WIDTH, self.COVER_HEIGHT),
+            'crop': True
+        })
+        self.cover.save(cover.name, cover.file, save=False)
+        os.remove(cover.path)
+
+    class Meta:
+        ordering = ('order', '-id',)
+        verbose_name = 'Изображение'
+        verbose_name_plural = 'Изображения на Главной'

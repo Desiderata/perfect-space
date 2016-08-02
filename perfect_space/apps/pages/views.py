@@ -1,6 +1,6 @@
 # coding=utf-8
 from django.views.generic import DetailView
-from perfect_space.apps.pages.models import Page
+from perfect_space.apps.pages.models import Page, MainImage
 from perfect_space.apps.publications.models import Publication
 
 
@@ -34,5 +34,11 @@ class PageView(TemplateMixin, DetailView):
     def context_about(self):
         context = {
             'publications': Publication.objects.all()
+        }
+        return context
+
+    def context_main(self):
+        context = {
+            'images': MainImage.objects.all()
         }
         return context

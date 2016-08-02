@@ -1,0 +1,1 @@
+/home/desiderata/.virtualenvs/perfect_space/lib/python3.4/site-packages/adminsortable2/static/adminsortable2/js/libs/jquery.ui.sortable-1.7.1.js
