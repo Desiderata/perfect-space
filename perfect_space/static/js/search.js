@@ -20,14 +20,13 @@ Search.prototype.events = function() {
 
 Search.prototype.onClickSearchButton = function(event) {
     event.preventDefault();
-    var query = this.searchInput.textContent;
-    var searchUrl = this.searchButton.getAttribute('data-url');
-    document.location = searchUrl + '?q=' + query;
+    this.submit();
 };
 Search.prototype.onKeyInputSearch = function(event) {
     var target = event.target;
     if (event.code == 'Enter') {
         event.preventDefault();
+        this.submit();
     }
     if (target.style.width) {
         target.removeAttribute('style');
@@ -63,4 +62,9 @@ Search.prototype.onBlurInputSearch = function(event) {
 
     this.width = target.clientWidth;
     target.style.width = this.minWidth;
+};
+Search.prototype.submit = function() {
+    var query = this.searchInput.textContent;
+    var searchUrl = this.searchButton.getAttribute('data-url');
+    document.location = searchUrl + '?q=' + query;
 };
