@@ -307,7 +307,7 @@ ul.social img {
 
 .input-group .searchbutton {
     padding: 0;
-    padding-top: 7px;
+    margin-top: 0;
 }
 .searchbutton:hover,
 .searchbutton:focus,

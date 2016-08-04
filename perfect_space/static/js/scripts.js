@@ -13,6 +13,9 @@ $(document).ready(function () {
         new ProjectMenu(projectMenu[0])
     }
 
+    // Search
+    new Search();
+
     // Stickyfill
     $('.sticky').Stickyfill();
 

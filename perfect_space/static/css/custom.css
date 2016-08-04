@@ -101,6 +101,7 @@ strong {
 .menu > li:last-child {
     width: 165px;
     text-align: right;
+    position: relative;
 }
 .menu > li a {
     display: inline-block;
@@ -428,6 +429,28 @@ strong {
     background-color: #fff;
 }
 
+.search-input {
+    min-width: 53px;
+    height: 21px;
+    line-height: 21px;
+    float: right;
+    background-color: #fff;
+    color: black;
+    white-space: nowrap;
+    text-align: left;
+    border: 1px solid #fff;
+    margin-top: -2px;
+    outline: none;
+    padding: 0 5px;
+    position: absolute;
+    right: 25px;
+    transition: width 200ms ease-in-out;
+    will-change: width;
+    overflow: hidden;
+}
+.search-input:focus {
+    border: 1px solid #000;
+}
 .search-query {
     color: #808080;
     padding: 60px 0 0;

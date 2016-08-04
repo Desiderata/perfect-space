@@ -93,9 +93,10 @@
                         <li>
                             <form action="{% url 'search_list' %}" method="get" role="form">
                                 <div class="input-group search">
-                                    <input type="text" name="q" class="form-control searchinput" placeholder="{% trans 'search' %}" value="">
+                                    <div id="search-input" class="search-input" contenteditable="true">{% trans 'search' %}</div>
+{#                                    <input type="text" name="q" class="form-control searchinput" placeholder="{% trans 'search' %}" value="">#}
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default searchbutton" type="submit"><img src="{% static 'icons/search-icon.png' %}" class="" alt=""></button>
+                                    <button data-url="{% url 'search_list' %}" id="search-button" class="btn btn-default searchbutton" type="submit"><img src="{% static 'icons/search-icon.png' %}" class="" alt=""></button>
                                 </span>
                                 </div>
                             </form>
@@ -161,6 +162,7 @@
 <script src="{% static 'js/os.js' %}"></script>
 <script src="{% static 'js/gallery.js' %}"></script>
 <script src="{% static 'js/project-menu.js' %}"></script>
+<script src="{% static 'js/search.js' %}"></script>
 <script src="{% static 'js/mobile.js' %}"></script>
 <script src="{% static 'js/scripts.js' %}?v1"></script>
 </body>
