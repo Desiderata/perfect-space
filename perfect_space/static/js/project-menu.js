@@ -14,7 +14,6 @@ var ProjectMenu = function(element) {
 
 // Init
 ProjectMenu.prototype.init = function() {
-    this.menuItems = this.element.getElementsByClassName('project-menu-item');
     this.blockItems = document.querySelectorAll('.page h4');
     this.projectCover = document.getElementById('project-cover');
     this.projectCover.addEventListener('load', this.onCoverLoad.bind(this));
@@ -32,7 +31,6 @@ ProjectMenu.prototype.initScrollTitles = function() {
 
 
 ProjectMenu.prototype.events = function() {
-    this.clickItemEvent();
     this.scrollEvent();
 };
 
@@ -56,6 +54,7 @@ ProjectMenu.prototype.scrollEvent = function() {
 ProjectMenu.prototype.onCoverLoad = function(event) {
     this.initScrollTitles();
     this.updateMenuItems();
+    this.clickItemEvent();
 };
 ProjectMenu.prototype.onClickMenuItem = function(event) {
     event.preventDefault();
@@ -96,6 +95,7 @@ ProjectMenu.prototype.onScroll = function(event) {
 
 // Support functions
 ProjectMenu.prototype.updateMenuItems = function() {
+    this.menuItems = this.element.getElementsByClassName('project-menu-item');
     if (!this.menuItems.length) {
         return;
     }
@@ -114,6 +114,7 @@ ProjectMenu.prototype.updateMenuItems = function() {
             menuItemsParent.appendChild(menu);
         }
     }
+    this.menuItems = this.element.getElementsByClassName('project-menu-item');
 };
 ProjectMenu.prototype.menuFindTitle = function(title) {
     var finded = false;
