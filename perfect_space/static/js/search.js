@@ -51,7 +51,7 @@ Search.prototype.onFocusInputSearch = function(event) {
 };
 Search.prototype.onBlurInputSearch = function(event) {
     var target = event.target;
-    if (target.textContent == '') {
+    if (target.textContent == '' || target.textContent == ' ') {
         target.textContent = this.searchText;
     }
 
